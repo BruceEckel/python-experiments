@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Using Cython, ignore generated C files:
+*.c
+
 # C extensions
 *.so
 
