@@ -8,11 +8,12 @@ def perform_operation(data):
         result += math.sqrt(i ** 3 + i ** 2 + i * data)
     return result
 
-def main(data_list):
+def main():
     with concurrent.futures.ProcessPoolExecutor() as executor:
+        print(f"{executor._max_workers = }")
         # Map the perform_operation function to each data item in parallel
-        results = executor.map(perform_operation, data_list)
+        results = executor.map(perform_operation, range(executor._max_workers))
     return list(results)
 
 if __name__ == "__main__":
-    print(main(range(32)))
+    print(main())
