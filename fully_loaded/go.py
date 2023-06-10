@@ -1,19 +1,17 @@
-import concurrent.futures
+from concurrent.futures import ProcessPoolExecutor
 import math
 
-def perform_operation(data):
-    # Perform a computationally intensive operation
+
+def computation(n):  # CPU-intensive
     result = 0
-    for i in range(10**7):
-        result += math.sqrt(i ** 3 + i ** 2 + i * data)
+    for i in range(10**7 * 2):
+        result += math.sqrt(i**3 + i**2 + i * n)
     return result
 
-def main():
-    with concurrent.futures.ProcessPoolExecutor() as executor:
-        print(f"{executor._max_workers = }")
-        # Map the perform_operation function to each data item in parallel
-        results = executor.map(perform_operation, range(executor._max_workers))
-    return list(results)
 
 if __name__ == "__main__":
-    print(main())
+    with ProcessPoolExecutor() as executor:
+        logical_processors = executor._max_workers
+        print(f"{logical_processors = }")
+        results = executor.map(computation, range(logical_processors - 1))
+    print(list(results))
