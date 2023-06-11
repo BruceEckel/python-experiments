@@ -27,5 +27,5 @@ From the docs for `tokio::spawn`:
 
 By looking at the task manager, it appears that the threads are allocated across cores. 
 Thus the Rust program is running within a single process that makes full use of all cores. 
-Because it is in a single process---unlike the Python program, which is distributing each call to `cpu_intensive()` into its own process---the Rust program will also not have the overhead of inter-process communication (IPC). 
+Because it is in a single process---unlike the Python program, which distributes each call to `cpu_intensive()` into its own process---the Rust program does not have the overhead of inter-process communication (IPC). 
 (In this example there's virtually no IPC involved so we do not see an impact from it).
