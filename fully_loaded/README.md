@@ -21,3 +21,6 @@ On my Windows 11 desktop machine, the program as-is completes in 5.6 seconds, us
 In the `rust` subdirectory you'll find the equivalent program using the `tokio` library. This runs about ten times faster.
 
 Note: The Rust program uses channels (the code is cleaner) and thus does not collect the results in order.
+
+From the docs for `tokio::spawn`:
+> Spawning a task enables the task to execute concurrently to other tasks. The spawned task may execute on the current thread, or it may be sent to a different thread to be executed. The specifics depend on the current Runtime configuration.
