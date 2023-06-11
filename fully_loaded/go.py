@@ -16,7 +16,7 @@ if __name__ == "__main__":
     start = time.monotonic()
     logical_processors = os.cpu_count()
     print(f"{logical_processors = }")
-    tasks = (logical_processors - 0) * 1  # Try different number of tasks
+    tasks = (logical_processors - 0) * 1  # Try different numbers
     print(f"{tasks = }")
 
     with ProcessPoolExecutor() as executor:
