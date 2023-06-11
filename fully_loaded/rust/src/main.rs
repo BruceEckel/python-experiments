@@ -1,6 +1,5 @@
-use std::sync::{Arc, Mutex};
-use std::time::Instant;
 use tokio::sync::mpsc;
+use std::time::Instant;
 
 fn cpu_intensive(n: u128, multiplier: u8) -> f64 {
     let mut result: f64 = 0.0;
@@ -17,7 +16,7 @@ async fn main() {
     dbg!(logical_processors);
     let tasks = (logical_processors - 0) * 1; // Try different numbers
     dbg!(tasks);
-    let start = Instant::now();
+    let timer = Instant::now();
 
     let (tx, mut rx) = mpsc::channel(tasks);
 
@@ -31,13 +30,9 @@ async fn main() {
 
     drop(tx); // Drop the transmitter to close the channel
 
-    let results = Arc::new(Mutex::new(Vec::new()));
     while let Some(result) = rx.recv().await {
-        let mut results = results.lock().unwrap();
-        results.push(result);
+        println!("{:?}", result);
     }
 
-    let results = Arc::try_unwrap(results).unwrap().into_inner().unwrap();
-    println!("{:?}", results);
-    println!("Elapsed time: {:.2}s", start.elapsed().as_secs_f64());
+    println!("Elapsed time: {:.2}s", timer.elapsed().as_secs_f64());
 }
