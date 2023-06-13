@@ -163,3 +163,4 @@ cython_debug/
 #.idea/
 cython-primes/primes.html
 fully_loaded/rust/Cargo.lock
+*.lock
