@@ -1,3 +1,4 @@
-python go.py
-python go_rust_extension.py
+python no_concurrency.py
+python with_concurrency.py
+python using_rust_extension.py
 .\rust\target\release\rust.exe
