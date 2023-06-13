@@ -1,7 +1,7 @@
 # Exploring ProcessPoolExecutor
 
 Python's `ProcessPoolExecutor` uses simple syntax to distribute tasks across multiple *processes* on your machine.
-In `go.py`, look at this expression:
+In `with_concurrency.py`, look at this expression:
 ```python
 executor.map(cpu_intensive, range(tasks), [multiplier] * tasks)
 ```
