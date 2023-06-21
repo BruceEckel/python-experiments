@@ -4,8 +4,8 @@ import time
 import os
 
 
-def cpu_intensive(n, multiplier):
-    result = 0
+def cpu_intensive(n: int, multiplier: int) -> float:
+    result: float = 0
     for i in range(10**7 * multiplier):
         result += math.sqrt(i**3 + i**2 + i * n)
     return result
