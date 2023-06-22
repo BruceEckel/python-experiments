@@ -27,10 +27,10 @@ In general the Cython experience is significantly more difficult than Rust.
 
 2.  Build the cython extension using the command:
     ```text
-    > python setup.py build_ext --inplace
+    python setup.py build_ext --inplace
     ```
 
 3.  Run the program:
     ```text
-    > python cython_concurrency.py
+    python cython_concurrency.py
     ```
