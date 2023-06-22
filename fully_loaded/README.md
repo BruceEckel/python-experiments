@@ -1,4 +1,9 @@
-# Exploring ProcessPoolExecutor
+# Python Performance Experiements
+
+The `cpu_intensive()` function is distributed across as many cores as your machine posesses, and actually works
+those cores to their max (unlike `sleep()`). Different strategies are used to increase performance.
+
+## ProcessPoolExecutor
 
 Python's `ProcessPoolExecutor` uses simple syntax to distribute tasks across multiple *processes* on your machine.
 In `with_concurrency.py`, look at this expression:
@@ -6,13 +11,13 @@ In `with_concurrency.py`, look at this expression:
 executor.map(cpu_intensive, range(tasks), [multiplier] * tasks)
 ```
 This starts `tasks` new processes. 
-Each new process contains a function call to `cpu_intensive` for its corresponding set of arguments from `range(tasks)` and `[multiplier] * tasks`
+Each new process contains a function call to `cpu_intensive()` for its corresponding set of arguments from `range(tasks)` and `[multiplier] * tasks`
 (`map` effectively `zip`s the two sequences to produce a sequence of argument lists).
 
 When you run the program, first open up your task manager and configure it to show the individual cores (in Windows, right-click in the CPU graph).
 You will see that the usage of every core is maximized while the calculations are performed.
 
-The program is written so you can play with different values, such as the number of tasks, and see the results.
+The program is written so you can play with different parameters, such as the number of tasks.
 
 ## Rust Extension
 
@@ -25,12 +30,18 @@ Note that the only difference between this and the `with_concurrency.py` script 
 
 In the `rust` subdirectory you'll find the equivalent program but using Rust for everything.
 
-Note: The Rust program uses channels (the code is cleaner) and thus does not collect the results in order.
+> Note: The Rust program uses channels (the code is cleaner) and thus does not collect the results in order.
 
 By looking at the task manager, you can see how the threads are allocated across cores. 
 Thus the Rust program is running within a single process that makes full use of all cores. 
 Because it is in a single process---unlike the Python program, which distributes each call to `cpu_intensive()` into its own process---the Rust program does not have the overhead of inter-process communication (IPC). 
 (In this example there's virtually no IPC involved so we do not see an impact from it).
+
+## Cython
+
+I tried numerous strategies to get the Cython extension working, and even when it did it produced incorrect results.
+FWIW, the performance was about 10x slower than the Rust extension (Assuming the working version would be similar).
+In general, I found the Rust experience *siginficantly* easier, and would not consider using Cython again.
 
 ## Performance Results
 
