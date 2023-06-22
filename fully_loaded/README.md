@@ -1,4 +1,4 @@
-# Python Performance Experiements
+# Python Performance Experiments
 
 The `cpu_intensive()` function is distributed across as many cores as your machine posesses, and actually works
 those cores to their max (unlike `sleep()`). Different strategies are used to increase performance.
@@ -41,9 +41,10 @@ Because it is in a single process---unlike the Python program, which distributes
 
 ## Cython
 
-I tried numerous strategies to get the Cython extension working, and even when it did it produced incorrect results.
+I tried numerous strategies to get the Cython extension working, and even when it did it produced incorrect results 
+(I am a Cython novice so I might have missed something obvious).
 FWIW, the performance was about 10x slower than the Rust extension (Assuming the working version would be similar).
-In general, I found the Rust experience *siginficantly* easier, and would not consider using Cython again.
+I found the Rust experience *siginficantly* easier, and would not consider using Cython again.
 
 ## Performance Results
 
