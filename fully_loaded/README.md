@@ -22,15 +22,17 @@ The program is written so you can play with different parameters, such as the nu
 ## Rust Extension
 
 The `rust_extension` subdirectory contains a python extension written in Rust using the `Py03` library. 
-You must be in a virtual environment to both build and use the extension (I used `hatch shell`).
+
+> **NOTE**: You must be in a virtual environment to both build and use the extension (I used `hatch shell`).
+
 The extension is used in the `using_rust_extension.py` script. 
-Note that the only difference between this and the `with_concurrency.py` script is that the `cpu_intensive()` function is now imported from a module.
+Notice that the only difference between this and the `with_concurrency.py` script is that the `cpu_intensive()` function is now imported from a module.
 
 ## Rust
 
 In the `rust` subdirectory you'll find the equivalent program but using Rust for everything.
 
-> Note: The Rust program uses channels (the code is cleaner) and thus does not collect the results in order.
+> **NOTE**: The Rust program uses channels (the code is cleaner) and thus does not collect the results in order.
 
 By looking at the task manager, you can see how the threads are allocated across cores. 
 Thus the Rust program is running within a single process that makes full use of all cores. 
