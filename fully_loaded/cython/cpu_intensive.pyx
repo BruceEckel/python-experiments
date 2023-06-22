@@ -1,7 +1,7 @@
 import cython
 import math
 
-def cpu_intensive(n: cython.int, multiplier: cython.int) -> cython.double:
+def cpu_intensive(n: cython.ulong, multiplier: cython.ulong) -> cython.double:
     result: cython.double = 0.0
     i: cython.ulong
 

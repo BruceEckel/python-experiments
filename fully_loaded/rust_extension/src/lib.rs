@@ -1,9 +1,9 @@
 use pyo3::prelude::*;
 
 #[pyfunction]
-fn cpu_intensive(n: u128, multiplier: u8) -> PyResult<f64> {
+fn cpu_intensive(n: u128, multiplier: u128) -> PyResult<f64> {
     let mut result: f64 = 0.0;
-    for i in 0..(10u128.pow(7) * multiplier as u128) {
+    for i in 0..(10_000_000 * multiplier) {
         result += ((i.pow(3) + i.pow(2) + i * n) as f64).sqrt();
     }
     Ok(result)
