@@ -15,5 +15,4 @@ if __name__ == "__main__":
     with ProcessPoolExecutor() as executor:
         results = executor.map(cpu_intensive, range(tasks), [multiplier] * tasks)
 
-    print(list(results))
-    print(f"Elapsed time: {time.monotonic() - start:.2f}s")
+    print(f"{list(results)}\nElapsed time: {time.monotonic() - start:.2f}s")

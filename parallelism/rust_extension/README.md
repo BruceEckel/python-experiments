@@ -7,12 +7,12 @@ You must be inside a virtual environment for this to work; I use:
 hatch shell
 ```
 
-To build, run 
+To build, run
 ```text
 maturin develop --release`
 ```
 
-Run the program from this directory with:
+You can run the program from inside this directory with:
 ```text
 python ../using_rust_extension.py
 ```

@@ -1,3 +1,4 @@
+from concurrent.futures import ProcessPoolExecutor
 import math
 import time
 import os
@@ -18,6 +19,7 @@ if __name__ == "__main__":
     print(f"{tasks = }")
     start = time.monotonic()
 
-    results = [cpu_intensive(n, multiplier) for n in range(tasks)]
+    with ProcessPoolExecutor() as executor:
+        results = executor.map(cpu_intensive, range(tasks), [multiplier] * tasks)
 
     print(f"{list(results)}\nElapsed time: {time.monotonic() - start:.2f}s")
