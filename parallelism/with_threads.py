@@ -1,25 +1,10 @@
 from concurrent.futures import ThreadPoolExecutor
-import math
-import time
-import os
-
-
-def cpu_intensive(n: int, multiplier: int) -> float:
-    result: float = 0
-    for i in range(10_000_000 * multiplier):
-        result += math.sqrt(i**3 + i**2 + i * n)
-    return result
-
+from cpu_intensive import cpu_intensive
+from scenario_tester import scenario
 
 if __name__ == "__main__":
-    multiplier = 1  # Increase for longer computations
-    logical_processors = os.cpu_count()
-    print(f"{logical_processors = }")
-    tasks = (logical_processors - 0) * 1  # Try different numbers
-    print(f"{tasks = }")
-    start = time.monotonic()
-
-    with ThreadPoolExecutor() as executor:
-        results = executor.map(cpu_intensive, range(tasks), [multiplier] * tasks)
-
-    print(f"{list(results)}\nElapsed time: {time.monotonic() - start:.2f}s")
+    with scenario() as scenario:
+        with ThreadPoolExecutor() as executor:
+            scenario.results = executor.map(
+                cpu_intensive, scenario.args1, scenario.args2
+            )

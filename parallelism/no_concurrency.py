@@ -1,23 +1,8 @@
-import math
-import time
-import os
-
-
-def cpu_intensive(n: int, multiplier: int) -> float:
-    result: float = 0
-    for i in range(10_000_000 * multiplier):
-        result += math.sqrt(i**3 + i**2 + i * n)
-    return result
-
+from cpu_intensive import cpu_intensive
+from scenario_tester import scenario
 
 if __name__ == "__main__":
-    multiplier = 1  # Increase for longer computations
-    logical_processors = os.cpu_count()
-    print(f"{logical_processors = }")
-    tasks = (logical_processors - 0) * 1  # Try different numbers
-    print(f"{tasks = }")
-    start = time.monotonic()
-
-    results = [cpu_intensive(n, multiplier) for n in range(tasks)]
-
-    print(f"{list(results)}\nElapsed time: {time.monotonic() - start:.2f}s")
+    with scenario() as scenario:
+        scenario.results = [
+            cpu_intensive(n, scenario.multiplier) for n in scenario.args1
+        ]
