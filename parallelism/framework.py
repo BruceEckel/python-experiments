@@ -21,6 +21,7 @@ class RunCPUIntensive:
 
 if __name__ == "__main__":
     with RunCPUIntensive() as test:
+        print(type(test))
         with ProcessPoolExecutor() as executor:
             test.results = executor.map(
                 cpu_intensive, range(test.tasks), [test.multiplier] * test.tasks
