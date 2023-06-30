@@ -1,9 +1,8 @@
+import sys
 from pathlib import Path
 
 
-def display_directory_contents(path):
-    path = Path(path)
-
+def display_directory_contents(path: Path) -> None:
     for item in path.iterdir():
         if item.is_file():
             print("File:", item.name)
@@ -12,6 +11,12 @@ def display_directory_contents(path):
             display_directory_contents(item)
 
 
-# Call the function with the current directory
-current_directory = Path.cwd()
-display_directory_contents(current_directory)
+if __name__ == "__main__":
+    # Select the starting directory from the command line
+    # or use the current directory
+    if len(sys.argv) > 1:
+        starting_directory = Path(sys.argv[1])
+    else:
+        starting_directory = Path.cwd()
+
+    display_directory_contents(starting_directory)
