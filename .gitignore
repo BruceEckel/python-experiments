@@ -164,3 +164,4 @@ cython_debug/
 cython-primes/primes.html
 fully_loaded/rust/Cargo.lock
 *.lock
+C4-DSL/.structurizr/
