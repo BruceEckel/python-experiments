@@ -1,14 +1,14 @@
 workspace {
 
     model {
-        user = person "User"
-        softwareSystem = softwareSystem "Software System"
+        user = person "Bob Dobbs"
+        softwareSystem = softwareSystem "Boats Boats Boats"
 
         user -> softwareSystem "Uses"
     }
 
     views {
-        systemContext softwareSystem "Diagram1" {
+        systemContext softwareSystem "Boat_System_Diagram" {
             include *
             autoLayout
         }
