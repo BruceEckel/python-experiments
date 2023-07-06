@@ -30,5 +30,5 @@ def scenario():
     try:
         yield scenario
     finally:
-        elapsed_time = time.monotonic() - start
-        print(f"{pformat(list(scenario.results))}\nElapsed time: {elapsed_time:.2f}s")
+        elapsed = time.monotonic() - start
+        print(f"{pformat(list(scenario.results))}\nElapsed time: {elapsed:.2f}s")
