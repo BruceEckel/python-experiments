@@ -9,15 +9,10 @@ async def child(id: str):
     print(f"{id}: exiting!")
 
 
-def char_range(c1, c2):
-    for c in range(ord(c1), ord(c2) + 1):
-        yield chr(c)
-
-
 async def parent():
     print("parent: started!")
     async with trio.open_nursery() as tasks:
-        for c in char_range("A", "F"):
+        for c in "ABCDEF":
             print(f"parent: spawning child({c})")
             tasks.start_soon(child, c)
         print("parent: waiting for children to finish...")
