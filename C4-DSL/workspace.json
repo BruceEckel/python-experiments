@@ -1,451 +1,118 @@
 {
   "id" : 1,
-  "name" : "C4 DSL Extension Workspace",
+  "name" : "Name",
   "description" : "Description",
-  "lastModifiedDate" : "2023-07-10T16:44:31Z",
+  "lastModifiedDate" : "2023-07-19T23:19:30Z",
+  "lastModifiedAgent" : "structurizr-javascript",
   "properties" : {
-    "structurizr.dsl" : "IWNvbnN0YW50ICBjNCAiYzQuZHNsIg0KDQp3b3Jrc3BhY2UgIkM0IERTTCBFeHRlbnNpb24gV29ya3NwYWNlIiB7DQogICBtb2RlbCB7DQoNCiAgICAgIGFyY2hpdGVjdCA9IHBlcnNvbiAiU29mdHdhcmUgQXJjaGl0ZWN0IiAiTW9kZWxsaW5nIHRoZSBTVyBhcmNoaXRlY3R1cmUgd2l0aCBDNCBEU0wiDQoNCiAgICAgIGtyb2tpID0gc29mdHdhcmVTeXN0ZW0gIktyb2tpLmlvIFNlcnZlciIgIkNyZWF0ZXMgZGlhZ3JhbXMgZnJvbSB0ZXh0dWFsIGRlc2NyaXB0aW9ucy4gS3Jva2kgcHJvdmlkZXMgYSB1bmlmaWVkIEFQSSB3aXRoIHN1cHBvcnQgZm9yIFBsYW50VU1MLCBNZXJtYWlkLCBldGMuIiAiRXh0ZXJuIg0KICAgICAgc3RydWN0dXJpenIgPSBzb2Z0d2FyZVN5c3RlbSAiU3RydWN0dXJpenIgU2VydmVyIiAiT3JpZ2luIHN0cnVjdHVyaXpyIHdlYnNlcnZpY2UgZm9yIHJlbmRlcmluZyBjNCBtb2RlbHMiICJFeHRlcm4iDQoNCiAgICAgIGM0RHNsRXh0ZW5zaW9uID0gc29mdHdhcmVTeXN0ZW0gIkM0IERzbCBFeHRlbnNpb24iICJUaGUgb3ZlcmFsbCBleHRlbnNpb24iIHsNCg0KICAgICAgICAgbGFuZ3VhZ2VTZXJ2ZXIgPSBjb250YWluZXIgIkxhbmd1YWdlIFNlcnZlciIgIlRoZSBMYW5ndWFnZSBTZXJ2ZXIgcHJvdmlkZXMgQyQgRFNMIHNwZWNpZmljIGZlYXR1cmVzIHZpYSBKU09OLVJQQyBiYXNlZCBwcm90b2NvbCB0byB0aGUgY29kZSBlZGl0b3IiICJKYXZhIEFwcGxpY2F0aW9uIiB7DQoNCiAgICAgICAgICAgIGM0X2RzbF9zZXJ2aWNlID0gY29tcG9uZW50ICJDNCBMYW5ndWFnZSBTZXJ2aWNlIiAiU2VydmVzIHRoZSBsYW5ndWFnZSBzZXJ2aWNlIHByb3RvY29sLiBIYW5kbGVzIGNvbm5lY3RlZCBjbGllbnRzIg0KICAgICAgICAgICAgYzRfZHNsX2dlbmVyYXRvciA9IGNvbXBvbmVudCAiQzQgR2VuZXJhdG9yIiAiR2VuZXJhdGVzIGRpZmZlcmVudCBmcm9tIGNvbnRlbnQgZnJvbSBjNCBtb2RlbHMsIGUuZy4gUGxhbnRVTUwgZmlsZXMiDQogICAgICAgICAgICBjNF9kc2xfcHJvdmlkZXIgPSBjb21wb25lbnQgIkM0IFByb3ZpZGVyIiAiUHJvdmlkZXMgZW5oYW5jZWQgZWRpdG9yIGZlYXR1cmVzIGxpa2UsIGNvZGUgbGVuc2VzLCB0b29sdGlwcywgY29udGVudCBhc3Npc3QsIGV0Yy4iDQoNCiAgICAgICAgICAgIHN0cnVjdHVyaXpyX2RzbCA9IGNvbXBvbmVudCAic3RydWN0dXJpenIuZHNsIiAiYSB3YXkgdG8gY3JlYXRlIFN0cnVjdHVyaXpyIHNvZnR3YXJlIGFyY2hpdGVjdHVyZSBtb2RlbHMgYmFzZWQgdXBvbiB0aGUgQzQgbW9kZWwgdXNpbmcgYSB0ZXh0dWFsIGRvbWFpbiBzcGVjaWZpYyBsYW5ndWFnZSIgIkxpYnJhcnkvSkFSIiAiU3RydWN0dXJpenIiDQogICAgICAgICAgICBzdHJ1Y3R1cml6cl9wbGFudHVtbCA9IGNvbXBvbmVudCAic3RydWN0dXJpenIucGxhbnR1bWwiICJFeHBvcnRzIHRoZSB2aWV3cyBpbiBhIFN0cnVjdHVyaXpyIHdvcmtzcGFjZSB0byBkaWFncmFtIGRlZmluaXRpb25zIHRoYXQgYXJlIGNvbXBhdGlibGUgd2l0aCBQbGFudFVNTCIgIkxpYnJhcnkvSkFSIiAiU3RydWN0dXJpenIiDQogICAgICAgICAgICBsc3A0aiA9IGNvbXBvbmVudCAib3JnLmVjbGlwc2UubHNwNGouKiIgIkphdmEgYmluZGluZyBmb3IgdGhlIExhbmd1YWdlIFNlcnZlciBQcm90b2NvbCIgIkxTUCIgIkV4dGVybiINCg0KICAgICAgICAgICAgcHVtbCA9IGNvbXBvbmVudCAicGxhbnR1bWwtZ2VuLyoucHVtbCIgIlBsYW50IFVNTCBmaWxlIiAiRmlsZSBTeXN0ZW0iICJGaWxlIg0KDQogICAgICAgICB9DQoNCiAgICAgICAgIGxhbmd1YWdlQ2xpZW50ID0gY29udGFpbmVyICJDNCBEU0wgQ2xpZW50IiAiQSBDNCBEU0wgbGFuZ3VhZ2UgZXh0ZW5zaW9uLCBjb25uZWN0aW5nIHRoZSBDNCBsYW5ndWFnZSBmZWF0dXJlcyB0byB0aGUgVlMgQ29kZSBFZGl0b3IuIFByZXZpZXdzIHRoZSBnZW5lcmF0ZWQgUGxhbnQgVU1MIGRpYWdyYW1zIiAiVlMgQ29kZSBFeHRlbnNpb24iIHsNCg0KICAgICAgICAgICAgZWRpdG9yID0gY29tcG9uZW50ICJWUyBDb2RlIEVkaXRvciIgIlRoZSBidWlsdC1pbiBWUyBDb2RlIEVkaXRvciIgIlZTIENvZGUgY29tcG9uZW50IiAiQnVpbHRJbiINCiAgICAgICAgICAgIGNvbW1hbmRfc2VydmljZSA9IGNvbXBvbmVudCAiVlMgQ29kZSBDb21tYW5kIFNlcnZpY2UiICJUaGUgYnVpbHQtaW4gVlMgQ29kZSBjb21tYW5kIHNlcnZpY2UuIFByb3ZpZGVzIHJlZ2lzdHJ5IGFuZCByb3V0aW5nIG9mIGNvbW1hbmRzIiAiVlMgQ29kZSBjb21wb25lbnQiICJCdWlsdEluIg0KDQogICAgICAgICAgICBjb21tYW5kcyA9IGNvbXBvbmVudCAiJHtjNH0uY29tbWFuZHMiICJDb21tYW5kcyBhcmUgdXNlZCB0byB0cmlnZ2VyIGFjdGlvbnMgaW4gVmlzdWFsIFN0dWRpbyBDb2RlIiAiVlMgQ29kZSBjb21wb25lbnQiDQoNCiAgICAgICAgICAgIGxhbmd1YWdlX2NsaWVudCA9IGNvbXBvbmVudCAibGFuZ3VhZ2UgY2xpZW50IiAiV2lyZSBDNCBEU0wgZmVhdHVyZXMgcHJvdmlkZWQgYnkgdGhlIGxhbmd1YWdlIHNlcnZlciB3aXRoIHRoZSBWUyBDb2RlIGVkaXRvciIgIlZTIENvZGUgY29tcG9uZW50Ig0KDQogICAgICAgICAgICBwbGFudHVtbF9wcmV2aWV3ID0gY29tcG9uZW50ICJQbGFudCBVTUwgUHJldmlldyIgIkEgYnVpbHQtaW4gV2VidmlldyBzaG93aW5nIHRoZSBQbGFudCBVTUwgZGlhZ3JhbSBvZiBhIGNvcnJlc3BvbmRpbmcgYzQgdmlldyINCiAgICAgICAgICAgIHN0cnVjdHVyaXpyX3ByZXZpZXcgPSBjb21wb25lbnQgIlN0cnVjdHVyaXpyIFByZXZpZXciICJBIGJ1aWx0LWluIFdlYnZpZXcgc2hvd2luZyB0aGUgc3RydWN0dXJpenIgZGlhZ3JhbSBvZiBhIGNvcnJlc3BvbmRpbmcgYzQgdmlldyINCg0KICAgICAgICAgfQ0KDQoNCiAgICAgIH0NCg0KICAgICAgYXJjaGl0ZWN0IC0+IGVkaXRvciAiU3BlY2lmaWVzIGFyY2hpdGVjdHVyZSBtb2RlbHMgd2l0aCAqLmRzbCBmaWxlcyINCg0KICAgICAgIyBjb21tdW5pY2F0aW9uIGluc2lkZSB2cyBjb2RlDQogICAgICBjb21tYW5kcyAtPiBjb21tYW5kX3NlcnZpY2UgIlJlZ2lzdGVyIGNvbW1hbmQiDQoNCiAgICAgIGVkaXRvciAtPiBsYW5ndWFnZV9jbGllbnQgIkNvbm5lY3RlZCB0byAqLmRzbCBmaWxlcyB2aWEgbGFuZ3VhZ2UgY2xpZW50L3NlcnZlciB0ZWNobmlxdWUiDQogICAgICBlZGl0b3IgLT4gY29tbWFuZHMgIlRyaWdnZXIgY29tbWFuZCB0byBqdW1wIHRvIFBsYW50VU1MIHByZXZpZXcgdmlhIGVtYmVkZGVkIGNvZGUgbGVuc2VzLCB3aGljaCBhcmUgaW5kaXJlY3RseSBwcm92aWRlZCBieSB0aGUgbGFuZ3VhZ2Ugc2VydmVyIiAiRXhlY3V0ZSBDb21tYW5kIiAiUnVudGltZSINCg0KICAgICAgbGFuZ3VhZ2VfY2xpZW50IC0+IGM0X2RzbF9zZXJ2aWNlICJMYXVuY2hlcyBhbmQgY29tbXVuaWNhdGVzIHdpdGggbGFuZ3VhZ2Ugc2VydmVyIiAiSlNPTi1SUEMvTFNQIiAiUnVudGltZSINCiAgICAgIGM0X2RzbF9zZXJ2aWNlIC0+IGxhbmd1YWdlX2NsaWVudCAiUHJvdmlkZXMgcmVxdWVzdGVkIGxhbmd1YWdlIGNhcGFiaWxpdGllcyIgIkpTT04tUlBDL0xTUCIgIlJ1bnRpbWUiDQoNCiAgICAgICMgY29tbXVuaWNhdGlvbiBpbnNpZGUgdGhlIGxhbmd1YWdlIHNlcnZlcg0KICAgICAgYzRfZHNsX3NlcnZpY2UgLT4gbHNwNGogIlVzZXMiDQogICAgICBjNF9kc2xfc2VydmljZSAtPiBjNF9kc2xfcHJvdmlkZXIgIlJlLWRpcmVjdHMgYmFzaWMgbGFuZ3VhZ2UgZmVhdHVyZSByZXF1ZXN0cyINCiAgICAgIGM0X2RzbF9zZXJ2aWNlIC0+IGM0X2RzbF9nZW5lcmF0b3IgIlJlLWRpcmVjdHMgZ2VuZXJhdG9yIGNvbW1hbmRzIg0KICAgICAgYzRfZHNsX3Byb3ZpZGVyIC0+IHN0cnVjdHVyaXpyX2RzbCAiQ2FsbHMgdGhlIHN0cnVjdHVyaXpyIHBhcnNlciBhbmQgbWFuYWdlcyB0aGUgcmVzdWx0aW5nIG1vZGVsIg0KICAgICAgYzRfZHNsX3Byb3ZpZGVyIC0+IHN0cnVjdHVyaXpyX3BsYW50dW1sICJDcmVhdGVzIGNvbnRlbnQgZm9yIHRoZSBjb2RlIGxlbnNlcyINCg0KICAgICAgLy9kc2xfY29yZSAtPiBzdHJ1Y3R1cml6cl9kc2wgIlBhcnNlcyB0aGUgcmF3IHRleHQgaW50byBhIHN0cnVjdHVyaXpyIGNvbXBsaWFudCBkYXRhIG1vZGVsIg0KICAgICAgYzRfZHNsX2dlbmVyYXRvciAtPiBzdHJ1Y3R1cml6cl9wbGFudHVtbCAiVHJhbnNmb3JtcyB0aGUgc3RydWN0dXJpenIgY29tcGxpYW50IGRhdGEgbW9kZWwgaW50byBwdW1sIGZpbGVzIg0KDQogICAgICBzdHJ1Y3R1cml6cl9wbGFudHVtbCAtPiBwdW1sICJXcml0ZXMgKi5wdW1sIGZpbGVzIChQbGFudCBVTUwgY29kZSkgaW50byBhIGZvbGRlciBvbiByZXF1ZXN0LiBPbmUgcHVtbCBmb3IgZWFjaCB2aWV3LiINCg0KICAgICAgY29tbWFuZHMgLT4gcGxhbnR1bWxfcHJldmlldyAiVHJpZ2dlcnMgUGxhbnQgVU1MIFZpZXcgdmlhIGNvZGUgbGVuc2UiDQogICAgICBjb21tYW5kcyAtPiBzdHJ1Y3R1cml6cl9wcmV2aWV3ICJUcmlnZ2VycyBTdHJ1Y3R1cml6ciBWaWV3IHZpYSBjb2RlIGxlbnNlIg0KDQogICAgICBwbGFudHVtbF9wcmV2aWV3IC0+IGtyb2tpICJSZXF1ZXN0cyBTVkcgcmVwcmVzZW50YXRpb24gZnJvbSBhIGdpdmVuIGVuY29kZWQgUGxhbnQgVU1MIHN0cmluZyIgIkhUVFAiICJSdW50aW1lIg0KICAgICAgc3RydWN0dXJpenJfcHJldmlldyAtPiBzdHJ1Y3R1cml6ciAiUmVxdWVzdHMgU1ZHIHJlcHJlc2VudGF0aW9uIGZyb20gYSBnaXZlbiBlbmNvZGVkIHdvcmtzcGFjZSIgIkhUVFAiICJSdW50aW1lIg0KDQogICB9DQogICB2aWV3cyB7DQoNCiAgICAgIHN5c3RlbUxhbmRzY2FwZSBPdmVydmlldyAiQzQgRHNsIEV4dGVuc2lvbiBPdmVydmlldyIgew0KICAgICAgICAgaW5jbHVkZSAqDQoNCiAgICAgIH0NCg0KICAgICAgY29udGFpbmVyIGM0RHNsRXh0ZW5zaW9uIHsNCiAgICAgICAgIGluY2x1ZGUgKg0KDQogICAgICAgICB0aXRsZSAiQzQgRFNMIEV4dGVuc2lvbiBDb250ZXh0IFZpZXciDQogICAgICB9DQoNCiAgICAgIGNvbXBvbmVudCBsYW5ndWFnZUNsaWVudCB7DQogICAgICAgICBpbmNsdWRlICoNCg0KICAgICAgICAgdGl0bGUgIlRoZSBDNCBMYW5ndWFnZSBDbGllbnQiDQogICAgICB9DQoNCiAgICAgIGNvbXBvbmVudCBsYW5ndWFnZVNlcnZlciB7DQogICAgICAgICBpbmNsdWRlICoNCiAgICAgICAgIGF1dG9MYXlvdXQNCiAgICAgICAgIHRpdGxlICJUaGUgQzQgTGFuZ3VhZ2UgU2VydmVyIg0KICAgICAgfQ0KDQogICAgICBzdHlsZXMgew0KICAgICAgICAgZWxlbWVudCAiUGVyc29uIiB7DQogICAgICAgICAgICBiYWNrZ3JvdW5kICMwODQyN2INCiAgICAgICAgICAgIGNvbG9yICNmZmZmZmYNCiAgICAgICAgICAgIGZvbnRTaXplIDIyDQogICAgICAgICAgICBzaGFwZSBQZXJzb24NCiAgICAgICAgIH0NCg0KICAgICAgICAgZWxlbWVudCAiU29mdHdhcmUgU3lzdGVtIiB7DQogICAgICAgICAgICBiYWNrZ3JvdW5kICMxMTY4YmQNCiAgICAgICAgICAgIGNvbG9yICNmZmZmZmYNCiAgICAgICAgIH0NCiAgICAgICAgIGVsZW1lbnQgIlN0cnVjdHVyaXpyIiB7DQogICAgICAgICAgICBiYWNrZ3JvdW5kICM3N0ZGNDQNCiAgICAgICAgICAgIGNvbG9yICMwMDAwMDANCiAgICAgICAgIH0NCiAgICAgICAgIGVsZW1lbnQgIkNvbnRhaW5lciIgew0KICAgICAgICAgICAgYmFja2dyb3VuZCAjNDM4ZGQ1DQogICAgICAgICAgICBjb2xvciAjZmZmZmZmDQogICAgICAgICB9DQogICAgICAgICBlbGVtZW50ICJDb21wb25lbnQiIHsNCiAgICAgICAgICAgIGJhY2tncm91bmQgIzg1YmJmMA0KICAgICAgICAgICAgY29sb3IgIzAwMDAwMA0KICAgICAgICAgfQ0KICAgICAgICAgZWxlbWVudCAiQnVpbHRJbiIgew0KICAgICAgICAgICAgYmFja2dyb3VuZCAjMTk4OGY2DQogICAgICAgICAgICBjb2xvciAjRkZGRkZGDQogICAgICAgICB9DQogICAgICAgICBlbGVtZW50ICJFeHRlcm4iIHsNCiAgICAgICAgICAgIGJhY2tncm91bmQgI2RkZGRkZA0KICAgICAgICAgICAgY29sb3IgIzAwMDAwMA0KICAgICAgICAgfQ0KDQogICAgICAgICBlbGVtZW50ICJFeHRlbnNpb24iIHsNCiAgICAgICAgICAgIGJhY2tncm91bmQgI0ZGZGQ4OA0KICAgICAgICAgICAgY29sb3IgIzAwMDAwMA0KICAgICAgICAgfQ0KDQogICAgICAgICBlbGVtZW50ICJGaWxlIiB7DQogICAgICAgICAgICBzaGFwZSBGb2xkZXINCiAgICAgICAgICAgIGJhY2tncm91bmQgIzQ0ODcwNA0KICAgICAgICAgICAgY29sb3IgI2ZmZmZmZg0KICAgICAgICAgfQ0KDQogICAgICAgICByZWxhdGlvbnNoaXAgIlJlbGF0aW9uc2hpcCIgew0KICAgICAgICAgICAgZGFzaGVkIGZhbHNlDQogICAgICAgICB9DQoNCiAgICAgICAgIHJlbGF0aW9uc2hpcCAiUnVudGltZSIgew0KICAgICAgICAgICAgZGFzaGVkIHRydWUNCiAgICAgICAgICAgIGNvbG9yICMwMDAwRkYNCiAgICAgICAgIH0NCg0KICAgICAgfQ0KICAgfQ0KDQp9DQo="
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKICBtb2RlbCB7CiAgICB0YXNrTWFuYWdlbWVudFN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJUYXNrIE1hbmFnZW1lbnQgU3lzdGVtIGZvciBSb2JvdHMiIHsKICAgICAgd2ViQXBwID0gY29udGFpbmVyICJXZWIgQXBwbGljYXRpb24iICJBIHdlYiBhcHBsaWNhdGlvbiB0aGF0IGFsbG93cyBodW1hbnMgdG8gY3JlYXRlIGFuZCBhc3NpZ24gdGFza3MgdG8gcm9ib3RzLiIgIkphdmEsIFNwcmluZyBCb290IgogICAgICBkYXRhYmFzZSA9IGNvbnRhaW5lciAiRGF0YWJhc2UiICJBIGRhdGFiYXNlIHRoYXQgc3RvcmVzIHRhc2tzIGFuZCByb2JvdCBpbmZvcm1hdGlvbi4iICJNeVNRTCIKICAgIH0KICAgIHVzZXIgPSBwZXJzb24gIkh1bWFuIiAiQSB1c2VyIG9mIHRoZSBzeXN0ZW0gd2hvIGNhbiBjcmVhdGUgYW5kIGFzc2lnbiB0YXNrcyB0byByb2JvdHMuIgogICAgcm9ib3QgPSBwZXJzb24gIlJvYm90IiAiQSBkZXZpY2UgdGhhdCBjYW4gcGVyZm9ybSB0YXNrcyBhc3NpZ25lZCBieSBodW1hbnMuIiAiQysrLCBST1MiCgogICAgdXNlciAtPiB3ZWJBcHAgIlVzZXMiCiAgICB3ZWJBcHAgLT4gZGF0YWJhc2UgIlJlYWRzIGZyb20gYW5kIHdyaXRlcyB0byIKICAgIHdlYkFwcCAtPiByb2JvdCAiU2VuZHMgdGFzayBhc3NpZ25tZW50cyB2aWEiCiAgICByb2JvdCAtPiB3ZWJBcHAgIlJlcG9ydHMgc3RhdHVzIGFuZCBwcm9ncmVzcyB2aWEiCiAgfQoKICB2aWV3cyB7CiAgICBzeXN0ZW1Db250ZXh0IHRhc2tNYW5hZ2VtZW50U3lzdGVtIHsKICAgICAgaW5jbHVkZSAqCiAgICAgIGF1dG9MYXlvdXQKICAgIH0KCiAgICBjb250YWluZXIgdGFza01hbmFnZW1lbnRTeXN0ZW0gewogICAgICBpbmNsdWRlICoKICAgICAgYXV0b0xheW91dAogICAgfQogIH0KfQo="
   },
   "configuration" : { },
   "model" : {
     "people" : [ {
-      "id" : "1",
+      "id" : "4",
       "tags" : "Element,Person",
       "properties" : {
-        "structurizr.dsl.identifier" : "architect"
+        "structurizr.dsl.identifier" : "user"
       },
-      "name" : "Software Architect",
-      "description" : "Modelling the SW architecture with C4 DSL",
+      "name" : "Human",
+      "description" : "A user of the system who can create and assign tasks to robots.",
       "relationships" : [ {
-        "id" : "20",
+        "id" : "6",
         "tags" : "Relationship",
         "properties" : {
-          "structurizr.dsl.identifier" : "7da27df9-f1e0-48e5-91fb-3246e4594bde"
+          "structurizr.dsl.identifier" : "d73479f1-e09c-4d1b-8fb1-5c1f44ec2a6e"
         },
-        "sourceId" : "1",
-        "destinationId" : "14",
-        "description" : "Specifies architecture models with *.dsl files"
+        "sourceId" : "4",
+        "destinationId" : "2",
+        "description" : "Uses"
       }, {
-        "id" : "21",
-        "sourceId" : "1",
-        "destinationId" : "13",
-        "description" : "Specifies architecture models with *.dsl files",
-        "linkedRelationshipId" : "20"
+        "id" : "7",
+        "sourceId" : "4",
+        "destinationId" : "1",
+        "description" : "Uses",
+        "linkedRelationshipId" : "6"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "5",
+      "tags" : "Element,Person,C++,ROS",
+      "properties" : {
+        "structurizr.dsl.identifier" : "robot"
+      },
+      "name" : "Robot",
+      "description" : "A device that can perform tasks assigned by humans.",
+      "relationships" : [ {
+        "id" : "11",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "1b15a234-d9f6-43b9-97c6-b5c6771e2d23"
+        },
+        "sourceId" : "5",
+        "destinationId" : "2",
+        "description" : "Reports status and progress via"
       }, {
-        "id" : "22",
-        "sourceId" : "1",
-        "destinationId" : "4",
-        "description" : "Specifies architecture models with *.dsl files",
-        "linkedRelationshipId" : "20"
+        "id" : "12",
+        "sourceId" : "5",
+        "destinationId" : "1",
+        "description" : "Reports status and progress via",
+        "linkedRelationshipId" : "11"
       } ],
       "location" : "Unspecified"
     } ],
     "softwareSystems" : [ {
-      "id" : "2",
-      "tags" : "Element,Software System,Extern",
-      "properties" : {
-        "structurizr.dsl.identifier" : "kroki"
-      },
-      "name" : "Kroki.io Server",
-      "description" : "Creates diagrams from textual descriptions. Kroki provides a unified API with support for PlantUML, Mermaid, etc.",
-      "location" : "Unspecified",
-      "documentation" : { }
-    }, {
-      "id" : "3",
-      "tags" : "Element,Software System,Extern",
-      "properties" : {
-        "structurizr.dsl.identifier" : "structurizr"
-      },
-      "name" : "Structurizr Server",
-      "description" : "Origin structurizr webservice for rendering c4 models",
-      "location" : "Unspecified",
-      "documentation" : { }
-    }, {
-      "id" : "4",
+      "id" : "1",
       "tags" : "Element,Software System",
       "properties" : {
-        "structurizr.dsl.identifier" : "c4dslextension"
+        "structurizr.dsl.identifier" : "taskmanagementsystem"
       },
-      "name" : "C4 Dsl Extension",
-      "description" : "The overall extension",
+      "name" : "Task Management System for Robots",
       "relationships" : [ {
-        "id" : "45",
-        "sourceId" : "4",
-        "destinationId" : "2",
-        "description" : "Requests SVG representation from a given encoded Plant UML string",
-        "technology" : "HTTP",
-        "linkedRelationshipId" : "43"
-      }, {
-        "id" : "48",
-        "sourceId" : "4",
-        "destinationId" : "3",
-        "description" : "Requests SVG representation from a given encoded workspace",
-        "technology" : "HTTP",
-        "linkedRelationshipId" : "46"
+        "id" : "10",
+        "sourceId" : "1",
+        "destinationId" : "5",
+        "description" : "Sends task assignments via",
+        "linkedRelationshipId" : "9"
       } ],
       "location" : "Unspecified",
       "containers" : [ {
-        "id" : "5",
+        "id" : "2",
         "tags" : "Element,Container",
         "properties" : {
-          "structurizr.dsl.identifier" : "languageserver"
+          "structurizr.dsl.identifier" : "webapp"
         },
-        "name" : "Language Server",
-        "description" : "The Language Server provides C$ DSL specific features via JSON-RPC based protocol to the code editor",
+        "name" : "Web Application",
+        "description" : "A web application that allows humans to create and assign tasks to robots.",
         "relationships" : [ {
-          "id" : "32",
-          "sourceId" : "5",
-          "destinationId" : "17",
-          "description" : "Provides requested language capabilities",
-          "technology" : "JSON-RPC/LSP",
-          "linkedRelationshipId" : "30"
-        }, {
-          "id" : "33",
-          "sourceId" : "5",
-          "destinationId" : "13",
-          "description" : "Provides requested language capabilities",
-          "technology" : "JSON-RPC/LSP",
-          "linkedRelationshipId" : "30"
-        } ],
-        "technology" : "Java Application",
-        "components" : [ {
-          "id" : "10",
-          "tags" : "Element,Component,Structurizr",
-          "properties" : {
-            "structurizr.dsl.identifier" : "structurizr_plantuml"
-          },
-          "name" : "structurizr.plantuml",
-          "description" : "Exports the views in a Structurizr workspace to diagram definitions that are compatible with PlantUML",
-          "relationships" : [ {
-            "id" : "40",
-            "tags" : "Relationship",
-            "properties" : {
-              "structurizr.dsl.identifier" : "4abfb5d5-8b3b-46f8-bcd5-3d782aa78ab5"
-            },
-            "sourceId" : "10",
-            "destinationId" : "12",
-            "description" : "Writes *.puml files (Plant UML code) into a folder on request. One puml for each view."
-          } ],
-          "technology" : "Library/JAR",
-          "documentation" : { }
-        }, {
-          "id" : "7",
-          "tags" : "Element,Component",
-          "properties" : {
-            "structurizr.dsl.identifier" : "c4_dsl_generator"
-          },
-          "name" : "C4 Generator",
-          "description" : "Generates different from content from c4 models, e.g. PlantUML files",
-          "relationships" : [ {
-            "id" : "39",
-            "tags" : "Relationship",
-            "properties" : {
-              "structurizr.dsl.identifier" : "c85e0e09-d934-4664-bdfe-d15eabe96ec1"
-            },
-            "sourceId" : "7",
-            "destinationId" : "10",
-            "description" : "Transforms the structurizr compliant data model into puml files"
-          } ],
-          "documentation" : { }
-        }, {
           "id" : "8",
-          "tags" : "Element,Component",
+          "tags" : "Relationship",
           "properties" : {
-            "structurizr.dsl.identifier" : "c4_dsl_provider"
+            "structurizr.dsl.identifier" : "034cb1dd-0b7d-4243-b6ea-21ccdf3b832a"
           },
-          "name" : "C4 Provider",
-          "description" : "Provides enhanced editor features like, code lenses, tooltips, content assist, etc.",
-          "relationships" : [ {
-            "id" : "37",
-            "tags" : "Relationship",
-            "properties" : {
-              "structurizr.dsl.identifier" : "c0de00a5-90b4-496e-a52d-e3e15b9a5b75"
-            },
-            "sourceId" : "8",
-            "destinationId" : "9",
-            "description" : "Calls the structurizr parser and manages the resulting model"
-          }, {
-            "id" : "38",
-            "tags" : "Relationship",
-            "properties" : {
-              "structurizr.dsl.identifier" : "14eae0dc-dd85-4f31-864f-36895a50854b"
-            },
-            "sourceId" : "8",
-            "destinationId" : "10",
-            "description" : "Creates content for the code lenses"
-          } ],
-          "documentation" : { }
+          "sourceId" : "2",
+          "destinationId" : "3",
+          "description" : "Reads from and writes to"
         }, {
           "id" : "9",
-          "tags" : "Element,Component,Structurizr",
+          "tags" : "Relationship",
           "properties" : {
-            "structurizr.dsl.identifier" : "structurizr_dsl"
+            "structurizr.dsl.identifier" : "728b9f87-722e-4bbf-89d7-0617d77093d8"
           },
-          "name" : "structurizr.dsl",
-          "description" : "a way to create Structurizr software architecture models based upon the C4 model using a textual domain specific language",
-          "technology" : "Library/JAR",
-          "documentation" : { }
-        }, {
-          "id" : "11",
-          "tags" : "Element,Component,Extern",
-          "properties" : {
-            "structurizr.dsl.identifier" : "lsp4j"
-          },
-          "name" : "org.eclipse.lsp4j.*",
-          "description" : "Java binding for the Language Server Protocol",
-          "technology" : "LSP",
-          "documentation" : { }
-        }, {
-          "id" : "12",
-          "tags" : "Element,Component,File",
-          "properties" : {
-            "structurizr.dsl.identifier" : "puml"
-          },
-          "name" : "plantuml-gen/*.puml",
-          "description" : "Plant UML file",
-          "technology" : "File System",
-          "documentation" : { }
-        }, {
-          "id" : "6",
-          "tags" : "Element,Component",
-          "properties" : {
-            "structurizr.dsl.identifier" : "c4_dsl_service"
-          },
-          "name" : "C4 Language Service",
-          "description" : "Serves the language service protocol. Handles connected clients",
-          "relationships" : [ {
-            "id" : "30",
-            "tags" : "Relationship,Runtime",
-            "properties" : {
-              "structurizr.dsl.identifier" : "1148378b-7e03-466e-9531-1e463ce7168f"
-            },
-            "sourceId" : "6",
-            "destinationId" : "17",
-            "description" : "Provides requested language capabilities",
-            "technology" : "JSON-RPC/LSP"
-          }, {
-            "id" : "31",
-            "sourceId" : "6",
-            "destinationId" : "13",
-            "description" : "Provides requested language capabilities",
-            "technology" : "JSON-RPC/LSP",
-            "linkedRelationshipId" : "30"
-          }, {
-            "id" : "34",
-            "tags" : "Relationship",
-            "properties" : {
-              "structurizr.dsl.identifier" : "ca2460b9-3652-4ce9-9e05-d8aaa9bcaffe"
-            },
-            "sourceId" : "6",
-            "destinationId" : "11",
-            "description" : "Uses"
-          }, {
-            "id" : "35",
-            "tags" : "Relationship",
-            "properties" : {
-              "structurizr.dsl.identifier" : "fbe6f8a7-f0b7-4e1c-b030-f1e061c04c95"
-            },
-            "sourceId" : "6",
-            "destinationId" : "8",
-            "description" : "Re-directs basic language feature requests"
-          }, {
-            "id" : "36",
-            "tags" : "Relationship",
-            "properties" : {
-              "structurizr.dsl.identifier" : "a6b59727-1922-42d8-910b-65d46c6b3cf7"
-            },
-            "sourceId" : "6",
-            "destinationId" : "7",
-            "description" : "Re-directs generator commands"
-          } ],
-          "documentation" : { }
+          "sourceId" : "2",
+          "destinationId" : "5",
+          "description" : "Sends task assignments via"
         } ],
+        "technology" : "Java, Spring Boot",
         "documentation" : { }
       }, {
-        "id" : "13",
+        "id" : "3",
         "tags" : "Element,Container",
         "properties" : {
-          "structurizr.dsl.identifier" : "languageclient"
+          "structurizr.dsl.identifier" : "database"
         },
-        "name" : "C4 DSL Client",
-        "description" : "A C4 DSL language extension, connecting the C4 language features to the VS Code Editor. Previews the generated Plant UML diagrams",
-        "relationships" : [ {
-          "id" : "28",
-          "sourceId" : "13",
-          "destinationId" : "6",
-          "description" : "Launches and communicates with language server",
-          "technology" : "JSON-RPC/LSP",
-          "linkedRelationshipId" : "26"
-        }, {
-          "id" : "29",
-          "sourceId" : "13",
-          "destinationId" : "5",
-          "description" : "Launches and communicates with language server",
-          "technology" : "JSON-RPC/LSP",
-          "linkedRelationshipId" : "26"
-        }, {
-          "id" : "44",
-          "sourceId" : "13",
-          "destinationId" : "2",
-          "description" : "Requests SVG representation from a given encoded Plant UML string",
-          "technology" : "HTTP",
-          "linkedRelationshipId" : "43"
-        }, {
-          "id" : "47",
-          "sourceId" : "13",
-          "destinationId" : "3",
-          "description" : "Requests SVG representation from a given encoded workspace",
-          "technology" : "HTTP",
-          "linkedRelationshipId" : "46"
-        } ],
-        "technology" : "VS Code Extension",
-        "components" : [ {
-          "id" : "16",
-          "tags" : "Element,Component",
-          "properties" : {
-            "structurizr.dsl.identifier" : "commands"
-          },
-          "name" : "c4.dsl.commands",
-          "description" : "Commands are used to trigger actions in Visual Studio Code",
-          "relationships" : [ {
-            "id" : "23",
-            "tags" : "Relationship",
-            "properties" : {
-              "structurizr.dsl.identifier" : "a9cb0fa5-f0e9-4ad2-86f8-9590794c8dc8"
-            },
-            "sourceId" : "16",
-            "destinationId" : "15",
-            "description" : "Register command"
-          }, {
-            "id" : "41",
-            "tags" : "Relationship",
-            "properties" : {
-              "structurizr.dsl.identifier" : "bbc213c3-9745-4b71-a403-1c9266a37d2b"
-            },
-            "sourceId" : "16",
-            "destinationId" : "18",
-            "description" : "Triggers Plant UML View via code lense"
-          }, {
-            "id" : "42",
-            "tags" : "Relationship",
-            "properties" : {
-              "structurizr.dsl.identifier" : "143dacbc-ee33-4506-b563-0cb987943cf2"
-            },
-            "sourceId" : "16",
-            "destinationId" : "19",
-            "description" : "Triggers Structurizr View via code lense"
-          } ],
-          "technology" : "VS Code component",
-          "documentation" : { }
-        }, {
-          "id" : "15",
-          "tags" : "Element,Component,BuiltIn",
-          "properties" : {
-            "structurizr.dsl.identifier" : "command_service"
-          },
-          "name" : "VS Code Command Service",
-          "description" : "The built-in VS Code command service. Provides registry and routing of commands",
-          "technology" : "VS Code component",
-          "documentation" : { }
-        }, {
-          "id" : "18",
-          "tags" : "Element,Component",
-          "properties" : {
-            "structurizr.dsl.identifier" : "plantuml_preview"
-          },
-          "name" : "Plant UML Preview",
-          "description" : "A built-in Webview showing the Plant UML diagram of a corresponding c4 view",
-          "relationships" : [ {
-            "id" : "43",
-            "tags" : "Relationship,Runtime",
-            "properties" : {
-              "structurizr.dsl.identifier" : "340cabcd-aa45-43c3-ad02-4344db9f66b0"
-            },
-            "sourceId" : "18",
-            "destinationId" : "2",
-            "description" : "Requests SVG representation from a given encoded Plant UML string",
-            "technology" : "HTTP"
-          } ],
-          "documentation" : { }
-        }, {
-          "id" : "14",
-          "tags" : "Element,Component,BuiltIn",
-          "properties" : {
-            "structurizr.dsl.identifier" : "editor"
-          },
-          "name" : "VS Code Editor",
-          "description" : "The built-in VS Code Editor",
-          "relationships" : [ {
-            "id" : "24",
-            "tags" : "Relationship",
-            "properties" : {
-              "structurizr.dsl.identifier" : "c953493a-a00d-4b8b-a327-f5ee6b5c5a5a"
-            },
-            "sourceId" : "14",
-            "destinationId" : "17",
-            "description" : "Connected to *.dsl files via language client/server technique"
-          }, {
-            "id" : "25",
-            "tags" : "Relationship,Runtime",
-            "properties" : {
-              "structurizr.dsl.identifier" : "6e2dbc12-853a-474a-8fcb-50d8158f5b67"
-            },
-            "sourceId" : "14",
-            "destinationId" : "16",
-            "description" : "Trigger command to jump to PlantUML preview via embedded code lenses, which are indirectly provided by the language server",
-            "technology" : "Execute Command"
-          } ],
-          "technology" : "VS Code component",
-          "documentation" : { }
-        }, {
-          "id" : "17",
-          "tags" : "Element,Component",
-          "properties" : {
-            "structurizr.dsl.identifier" : "language_client"
-          },
-          "name" : "language client",
-          "description" : "Wire C4 DSL features provided by the language server with the VS Code editor",
-          "relationships" : [ {
-            "id" : "26",
-            "tags" : "Relationship,Runtime",
-            "properties" : {
-              "structurizr.dsl.identifier" : "f7d13b31-02b5-4ef6-9b38-8fb1a5577d09"
-            },
-            "sourceId" : "17",
-            "destinationId" : "6",
-            "description" : "Launches and communicates with language server",
-            "technology" : "JSON-RPC/LSP"
-          }, {
-            "id" : "27",
-            "sourceId" : "17",
-            "destinationId" : "5",
-            "description" : "Launches and communicates with language server",
-            "technology" : "JSON-RPC/LSP",
-            "linkedRelationshipId" : "26"
-          } ],
-          "technology" : "VS Code component",
-          "documentation" : { }
-        }, {
-          "id" : "19",
-          "tags" : "Element,Component",
-          "properties" : {
-            "structurizr.dsl.identifier" : "structurizr_preview"
-          },
-          "name" : "Structurizr Preview",
-          "description" : "A built-in Webview showing the structurizr diagram of a corresponding c4 view",
-          "relationships" : [ {
-            "id" : "46",
-            "tags" : "Relationship,Runtime",
-            "properties" : {
-              "structurizr.dsl.identifier" : "d22b5d29-d485-45a8-922b-e6a5744daa16"
-            },
-            "sourceId" : "19",
-            "destinationId" : "3",
-            "description" : "Requests SVG representation from a given encoded workspace",
-            "technology" : "HTTP"
-          } ],
-          "documentation" : { }
-        } ],
+        "name" : "Database",
+        "description" : "A database that stores tasks and robot information.",
+        "technology" : "MySQL",
         "documentation" : { }
       } ],
       "documentation" : { }
@@ -453,147 +120,14 @@
   },
   "documentation" : { },
   "views" : {
-    "systemLandscapeViews" : [ {
-      "key" : "Overview",
+    "systemContextViews" : [ {
+      "key" : "SystemContext-001",
       "order" : 1,
-      "description" : "C4 Dsl Extension Overview",
-      "enterpriseBoundaryVisible" : true,
-      "relationships" : [ {
-        "id" : "22"
-      }, {
-        "id" : "45"
-      }, {
-        "id" : "48"
-      } ],
-      "elements" : [ {
-        "id" : "1",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "2",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "3",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "4",
-        "x" : 0,
-        "y" : 0
-      } ]
-    } ],
-    "containerViews" : [ {
-      "key" : "Container-001",
-      "order" : 2,
-      "title" : "C4 DSL Extension Context View",
-      "softwareSystemId" : "4",
-      "externalSoftwareSystemBoundariesVisible" : true,
-      "relationships" : [ {
-        "id" : "29"
-      }, {
-        "id" : "33"
-      }, {
-        "id" : "21"
-      }, {
-        "id" : "44"
-      }, {
-        "id" : "47"
-      } ],
-      "elements" : [ {
-        "id" : "1",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "13",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "2",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "3",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "5",
-        "x" : 0,
-        "y" : 0
-      } ]
-    } ],
-    "componentViews" : [ {
-      "key" : "Component-001",
-      "order" : 3,
-      "title" : "The C4 Language Client",
-      "containerId" : "13",
-      "externalContainerBoundariesVisible" : true,
-      "relationships" : [ {
-        "id" : "27"
-      }, {
-        "id" : "25"
-      }, {
-        "id" : "41"
-      }, {
-        "id" : "24"
-      }, {
-        "id" : "23"
-      }, {
-        "id" : "42"
-      }, {
-        "id" : "43"
-      }, {
-        "id" : "32"
-      }, {
-        "id" : "20"
-      }, {
-        "id" : "46"
-      } ],
-      "elements" : [ {
-        "id" : "1",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "2",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "14",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "3",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "15",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "16",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "5",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "17",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "18",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "19",
-        "x" : 0,
-        "y" : 0
-      } ]
-    }, {
-      "key" : "Component-002",
-      "order" : 4,
-      "title" : "The C4 Language Server",
+      "softwareSystemId" : "1",
+      "dimensions" : {
+        "width" : 1500,
+        "height" : 1900
+      },
       "automaticLayout" : {
         "implementation" : "Graphviz",
         "rankDirection" : "TopBottom",
@@ -602,114 +136,87 @@
         "edgeSeparation" : 0,
         "vertices" : false
       },
-      "containerId" : "5",
-      "externalContainerBoundariesVisible" : true,
-      "relationships" : [ {
-        "id" : "28"
-      }, {
-        "id" : "37"
-      }, {
-        "id" : "40"
-      }, {
-        "id" : "36"
-      }, {
-        "id" : "35"
-      }, {
-        "id" : "34"
-      }, {
-        "id" : "31"
-      }, {
-        "id" : "38"
-      }, {
-        "id" : "39"
-      } ],
+      "enterpriseBoundaryVisible" : true,
       "elements" : [ {
-        "id" : "11",
-        "x" : 0,
-        "y" : 0
+        "id" : "1",
+        "x" : 523,
+        "y" : 799
       }, {
+        "id" : "4",
+        "x" : 523,
+        "y" : 199
+      }, {
+        "id" : "5",
+        "x" : 523,
+        "y" : 1399
+      } ],
+      "relationships" : [ {
         "id" : "12",
-        "x" : 0,
-        "y" : 0
+        "vertices" : [ {
+          "x" : 898,
+          "y" : 1249
+        } ]
       }, {
-        "id" : "13",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "6",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "7",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "8",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "9",
-        "x" : 0,
-        "y" : 0
+        "id" : "7"
       }, {
         "id" : "10",
-        "x" : 0,
-        "y" : 0
+        "vertices" : [ {
+          "x" : 598,
+          "y" : 1249
+        } ]
+      } ]
+    } ],
+    "containerViews" : [ {
+      "key" : "Container-001",
+      "order" : 2,
+      "softwareSystemId" : "1",
+      "paperSize" : "A5_Portrait",
+      "dimensions" : {
+        "width" : 1616,
+        "height" : 2020
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "2",
+        "x" : 583,
+        "y" : 808
+      }, {
+        "id" : "3",
+        "x" : 583,
+        "y" : 1408
+      }, {
+        "id" : "4",
+        "x" : 208,
+        "y" : 208
+      }, {
+        "id" : "5",
+        "x" : 958,
+        "y" : 208
+      } ],
+      "relationships" : [ {
+        "id" : "11"
+      }, {
+        "id" : "6"
+      }, {
+        "id" : "8"
+      }, {
+        "id" : "9"
       } ]
     } ],
     "configuration" : {
       "branding" : { },
-      "styles" : {
-        "elements" : [ {
-          "tag" : "Person",
-          "background" : "#08427b",
-          "color" : "#ffffff",
-          "fontSize" : 22,
-          "shape" : "Person"
-        }, {
-          "tag" : "Software System",
-          "background" : "#1168bd",
-          "color" : "#ffffff"
-        }, {
-          "tag" : "Structurizr",
-          "background" : "#77ff44",
-          "color" : "#000000"
-        }, {
-          "tag" : "Container",
-          "background" : "#438dd5",
-          "color" : "#ffffff"
-        }, {
-          "tag" : "Component",
-          "background" : "#85bbf0",
-          "color" : "#000000"
-        }, {
-          "tag" : "BuiltIn",
-          "background" : "#1988f6",
-          "color" : "#ffffff"
-        }, {
-          "tag" : "Extern",
-          "background" : "#dddddd",
-          "color" : "#000000"
-        }, {
-          "tag" : "Extension",
-          "background" : "#ffdd88",
-          "color" : "#000000"
-        }, {
-          "tag" : "File",
-          "background" : "#448704",
-          "color" : "#ffffff",
-          "shape" : "Folder"
-        } ],
-        "relationships" : [ {
-          "tag" : "Relationship",
-          "dashed" : false
-        }, {
-          "tag" : "Runtime",
-          "color" : "#0000ff",
-          "dashed" : true
-        } ]
-      },
-      "terminology" : { }
+      "styles" : { },
+      "terminology" : { },
+      "metadataSymbols" : "SquareBrackets",
+      "lastSavedView" : "SystemContext-001"
     }
   }
 }
