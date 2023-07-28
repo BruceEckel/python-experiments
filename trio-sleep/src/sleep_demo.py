@@ -1,7 +1,7 @@
 import trio
 
 
-async def sleeper(id: str) -> None:
+async def sleeper(id: str):
     print(f"{id} started and going to sleep")
     await trio.sleep(1)
     print(f"{id} awoken, exiting")
@@ -15,7 +15,7 @@ async def main():
         print("main starting b")
         tasks.start_soon(sleeper, "b")
 
-        print("main: waiting for children to finish...")
+        print("main waiting for children to finish...")
 
     print("main exiting")
 
