@@ -2,8 +2,7 @@
   "id" : 1,
   "name" : "Name",
   "description" : "Description",
-  "lastModifiedDate" : "2023-07-19T23:19:30Z",
-  "lastModifiedAgent" : "structurizr-javascript",
+  "lastModifiedDate" : "2023-08-02T16:57:43Z",
   "properties" : {
     "structurizr.dsl" : "d29ya3NwYWNlIHsKICBtb2RlbCB7CiAgICB0YXNrTWFuYWdlbWVudFN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJUYXNrIE1hbmFnZW1lbnQgU3lzdGVtIGZvciBSb2JvdHMiIHsKICAgICAgd2ViQXBwID0gY29udGFpbmVyICJXZWIgQXBwbGljYXRpb24iICJBIHdlYiBhcHBsaWNhdGlvbiB0aGF0IGFsbG93cyBodW1hbnMgdG8gY3JlYXRlIGFuZCBhc3NpZ24gdGFza3MgdG8gcm9ib3RzLiIgIkphdmEsIFNwcmluZyBCb290IgogICAgICBkYXRhYmFzZSA9IGNvbnRhaW5lciAiRGF0YWJhc2UiICJBIGRhdGFiYXNlIHRoYXQgc3RvcmVzIHRhc2tzIGFuZCByb2JvdCBpbmZvcm1hdGlvbi4iICJNeVNRTCIKICAgIH0KICAgIHVzZXIgPSBwZXJzb24gIkh1bWFuIiAiQSB1c2VyIG9mIHRoZSBzeXN0ZW0gd2hvIGNhbiBjcmVhdGUgYW5kIGFzc2lnbiB0YXNrcyB0byByb2JvdHMuIgogICAgcm9ib3QgPSBwZXJzb24gIlJvYm90IiAiQSBkZXZpY2UgdGhhdCBjYW4gcGVyZm9ybSB0YXNrcyBhc3NpZ25lZCBieSBodW1hbnMuIiAiQysrLCBST1MiCgogICAgdXNlciAtPiB3ZWJBcHAgIlVzZXMiCiAgICB3ZWJBcHAgLT4gZGF0YWJhc2UgIlJlYWRzIGZyb20gYW5kIHdyaXRlcyB0byIKICAgIHdlYkFwcCAtPiByb2JvdCAiU2VuZHMgdGFzayBhc3NpZ25tZW50cyB2aWEiCiAgICByb2JvdCAtPiB3ZWJBcHAgIlJlcG9ydHMgc3RhdHVzIGFuZCBwcm9ncmVzcyB2aWEiCiAgfQoKICB2aWV3cyB7CiAgICBzeXN0ZW1Db250ZXh0IHRhc2tNYW5hZ2VtZW50U3lzdGVtIHsKICAgICAgaW5jbHVkZSAqCiAgICAgIGF1dG9MYXlvdXQKICAgIH0KCiAgICBjb250YWluZXIgdGFza01hbmFnZW1lbnRTeXN0ZW0gewogICAgICBpbmNsdWRlICoKICAgICAgYXV0b0xheW91dAogICAgfQogIH0KfQo="
   },
@@ -21,7 +20,7 @@
         "id" : "6",
         "tags" : "Relationship",
         "properties" : {
-          "structurizr.dsl.identifier" : "d73479f1-e09c-4d1b-8fb1-5c1f44ec2a6e"
+          "structurizr.dsl.identifier" : "2179e76f-c339-4160-b4c5-452b8da51d23"
         },
         "sourceId" : "4",
         "destinationId" : "2",
@@ -46,7 +45,7 @@
         "id" : "11",
         "tags" : "Relationship",
         "properties" : {
-          "structurizr.dsl.identifier" : "1b15a234-d9f6-43b9-97c6-b5c6771e2d23"
+          "structurizr.dsl.identifier" : "72b5717d-d4ec-41de-93d6-212b026a74b1"
         },
         "sourceId" : "5",
         "destinationId" : "2",
@@ -76,6 +75,16 @@
       } ],
       "location" : "Unspecified",
       "containers" : [ {
+        "id" : "3",
+        "tags" : "Element,Container",
+        "properties" : {
+          "structurizr.dsl.identifier" : "database"
+        },
+        "name" : "Database",
+        "description" : "A database that stores tasks and robot information.",
+        "technology" : "MySQL",
+        "documentation" : { }
+      }, {
         "id" : "2",
         "tags" : "Element,Container",
         "properties" : {
@@ -87,7 +96,7 @@
           "id" : "8",
           "tags" : "Relationship",
           "properties" : {
-            "structurizr.dsl.identifier" : "034cb1dd-0b7d-4243-b6ea-21ccdf3b832a"
+            "structurizr.dsl.identifier" : "56a19f04-58c7-4063-a004-9839d31a2ac5"
           },
           "sourceId" : "2",
           "destinationId" : "3",
@@ -96,23 +105,13 @@
           "id" : "9",
           "tags" : "Relationship",
           "properties" : {
-            "structurizr.dsl.identifier" : "728b9f87-722e-4bbf-89d7-0617d77093d8"
+            "structurizr.dsl.identifier" : "a8d654c5-4a6d-4e9a-bca5-c30a7d721760"
           },
           "sourceId" : "2",
           "destinationId" : "5",
           "description" : "Sends task assignments via"
         } ],
         "technology" : "Java, Spring Boot",
-        "documentation" : { }
-      }, {
-        "id" : "3",
-        "tags" : "Element,Container",
-        "properties" : {
-          "structurizr.dsl.identifier" : "database"
-        },
-        "name" : "Database",
-        "description" : "A database that stores tasks and robot information.",
-        "technology" : "MySQL",
         "documentation" : { }
       } ],
       "documentation" : { }
@@ -124,10 +123,6 @@
       "key" : "SystemContext-001",
       "order" : 1,
       "softwareSystemId" : "1",
-      "dimensions" : {
-        "width" : 1500,
-        "height" : 1900
-      },
       "automaticLayout" : {
         "implementation" : "Graphviz",
         "rankDirection" : "TopBottom",
@@ -139,42 +134,29 @@
       "enterpriseBoundaryVisible" : true,
       "elements" : [ {
         "id" : "1",
-        "x" : 523,
-        "y" : 799
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "4",
-        "x" : 523,
-        "y" : 199
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "5",
-        "x" : 523,
-        "y" : 1399
+        "x" : 0,
+        "y" : 0
       } ],
       "relationships" : [ {
-        "id" : "12",
-        "vertices" : [ {
-          "x" : 898,
-          "y" : 1249
-        } ]
+        "id" : "12"
       }, {
         "id" : "7"
       }, {
-        "id" : "10",
-        "vertices" : [ {
-          "x" : 598,
-          "y" : 1249
-        } ]
+        "id" : "10"
       } ]
     } ],
     "containerViews" : [ {
       "key" : "Container-001",
       "order" : 2,
       "softwareSystemId" : "1",
-      "paperSize" : "A5_Portrait",
-      "dimensions" : {
-        "width" : 1616,
-        "height" : 2020
-      },
       "automaticLayout" : {
         "implementation" : "Graphviz",
         "rankDirection" : "TopBottom",
@@ -186,20 +168,20 @@
       "externalSoftwareSystemBoundariesVisible" : true,
       "elements" : [ {
         "id" : "2",
-        "x" : 583,
-        "y" : 808
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "3",
-        "x" : 583,
-        "y" : 1408
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "4",
-        "x" : 208,
-        "y" : 208
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "5",
-        "x" : 958,
-        "y" : 208
+        "x" : 0,
+        "y" : 0
       } ],
       "relationships" : [ {
         "id" : "11"
@@ -215,7 +197,6 @@
       "branding" : { },
       "styles" : { },
       "terminology" : { },
-      "metadataSymbols" : "SquareBrackets",
       "lastSavedView" : "SystemContext-001"
     }
   }
