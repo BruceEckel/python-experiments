@@ -1,27 +1,38 @@
-# sleeper-trio.py
 import trio
 
 
-async def sleeper(id: str, secs: int):
-    print(f"{id} sleeping {secs}s")
+def tasks():
+    ct = trio.lowlevel.current_task()
+    return ct.parent_nursery.child_tasks
+
+
+def show_tasks(msg: str):
+    for t in tasks():
+        print(
+            f"{t.name}[{t.coro.cr_running}]",
+            end=" ",
+        )
+    print(f"\n{msg}\n" + "-" * 25)
+
+
+async def nap(id: str, secs: int):
+    show_tasks(f"{id} napping {secs}s")
     await trio.sleep(secs)
-    print(f"{id} waking {secs}s")
+    show_tasks(f"{id} woken after {secs}s")
 
 
 async def main():
-    async with trio.open_nursery() as nursery:
-        nursery.start_soon(sleeper, "a", 5)
-        nursery.start_soon(sleeper, "b", 3)
-        nursery.start_soon(sleeper, "c", 1)
-        for task in nursery.child_tasks:
-            coro = task.coro
-            print(
-                f"{task.name}: "
-                + f"{coro.__name__}, "
-                + f"{coro.cr_running}"
-            )
+    for task in tasks():
+        if task.coro.__name__ == "main":
+            task.name = "Main"
 
-    print("Tasks complete")
+    async with trio.open_nursery() as tg:
+        tg.start_soon(nap, "A", 5, name="A")
+        tg.start_soon(nap, "B", 3, name="B")
+        tg.start_soon(nap, "C", 1, name="C")
+        show_tasks("tasks created")
+
+    show_tasks("Tasks complete")
 
 
 if __name__ == "__main__":
