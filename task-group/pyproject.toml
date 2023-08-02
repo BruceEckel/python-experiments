@@ -1,5 +1,5 @@
 [project]
-name = "asyncio-task-group"
+name = "task-group"
 version = "0.1.0"
 description = "Add your description here"
 authors = [{ name = "Bruce Eckel", email = "mindviewinc@gmail.com" }]

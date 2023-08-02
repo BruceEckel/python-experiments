@@ -1,4 +1,4 @@
-# basic-trio.py
+# sleeper-trio.py
 import trio
 
 
