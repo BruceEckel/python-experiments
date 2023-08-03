@@ -1,3 +1,4 @@
+# sleeper-trio.py
 import trio
 
 
@@ -25,13 +26,11 @@ async def main():
     for task in tasks():
         if task.coro.__name__ == "main":
             task.name = "Main"
-
     async with trio.open_nursery() as tg:
         tg.start_soon(nap, "A", 5, name="A")
         tg.start_soon(nap, "B", 3, name="B")
         tg.start_soon(nap, "C", 1, name="C")
         show_tasks("tasks created")
-
     show_tasks("Tasks complete")
 
 
