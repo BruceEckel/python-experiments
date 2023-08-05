@@ -34,5 +34,4 @@ async def main():
     show_tasks("Tasks complete")
 
 
-if __name__ == "__main__":
-    trio.run(main)
+trio.run(main)
