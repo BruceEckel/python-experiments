@@ -23,6 +23,19 @@ async def main1():
         if task.get_coro().__name__ == "main":
             task.set_name("Main")
     try:
+        async with asyncio.timeout(3):
+            await asyncio.create_task(nap("A", 5), name="A")
+        show_tasks("Tasks complete")
+    except TimeoutError:
+        print("timed out")
+    print("exiting")
+
+
+async def main2():
+    for task in asyncio.all_tasks():
+        if task.get_coro().__name__ == "main":
+            task.set_name("Main")
+    try:
         async with asyncio.timeout(5):
             async with asyncio.TaskGroup() as tg:
                 tg.create_task(nap("A", 5), name="A")
@@ -35,7 +48,7 @@ async def main1():
     print("exiting")
 
 
-async def main2():
+async def main3():
     for task in asyncio.all_tasks():
         if task.get_coro().__name__ == "main":
             task.set_name("Main")
@@ -55,4 +68,4 @@ async def main2():
     print("exiting")
 
 
-asyncio.run(main2())
+asyncio.run(main1())
