@@ -11,8 +11,8 @@ def next_abbrev(script: str):
         yield "\n"
 
 
-def main(fname: str):
-    script = Path(fname).read_text()
+def main(script_file_name: str):
+    script = Path(script_file_name).read_text()
     print("".join(list(next_abbrev(script))))
 
 
