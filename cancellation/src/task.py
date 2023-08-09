@@ -1,14 +1,16 @@
+# task.py
 import asyncio
 from obj import Obj
 
 
 async def task(id: str, delay: int):
+    o = Obj(id)
     print(f"starting task({id}, {delay})")
-    obj = Obj(id)
     await asyncio.sleep(delay)
-    objp = Obj(id + "'")
+    op = Obj(id + "'")
     await asyncio.sleep(1.0)
+    opp = Obj(id + "''")
     print(
         f"ending task({id}, {delay})"
-        + f" containing {obj} & {objp}"
+        + f" containing {o}, {op} & {opp}"
     )
