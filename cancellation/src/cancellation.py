@@ -1,41 +1,7 @@
 import asyncio
-
-
-def show_tasks(msg: str):
-    print(f"{msg}:")
-    for task in asyncio.all_tasks():
-        if task.get_coro().__name__ == "main":
-            task.set_name("Main")
-        running = task.get_coro().cr_running
-        print(
-            f"{task.get_name()}[{running}]",
-            end=" ",
-        )
-    print("\n" + "-" * 25)
-
-
-class Obj:
-    def __init__(self, id: str) -> None:
-        self.id = id
-        print(f"Created {self}")
-
-    def __repr__(self):
-        return f"[{self.id}]"
-
-    def __del__(self):
-        print(f"~{self}")
-
-
-async def task(id: str, delay: int):
-    print(f"starting task({id}, {delay})")
-    obj = Obj(id)
-    await asyncio.sleep(delay)
-    objp = Obj(id + "'")
-    await asyncio.sleep(1.0)
-    print(
-        f"ending task({id}, {delay})"
-        + f" containing {obj} & {objp}"
-    )
+from show_tasks import show_tasks
+from obj import Obj
+from task import task
 
 
 async def main():
