@@ -10,7 +10,7 @@ async def main():
             tg.create_task(
                 task(id, n + 1), name=id
             )
-            for n, id in enumerate("ABCDEF")
+            for n, id in enumerate("ABCDEFG")
         ]
         track(stop_task=tasks[0])
         await asyncio.sleep(0.1)
