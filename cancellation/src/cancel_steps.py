@@ -1,29 +1,31 @@
-# https://docs.python.org/3/library/asyncio-task.html#asyncio-example-task-cancel
 import asyncio
+from obj import Obj
 
 
 async def suspend(id: str, delay: int):
     print(f"suspend({id}, {delay})")
+    o = Obj(id)
     try:
         await asyncio.sleep(delay)
-    except asyncio.CancelledError:
+    except asyncio.CancelledError as e:
+        print(f"CancelledError: {e}")
         print(f"{id} cancelled")
-        raise
+        raise  # Don't swallow it
     finally:
         print(f"{id} finally")
-    print(f"{id} completed")
+    print(f"{id} completed with {o}")
 
 
 async def f():
     print("starting f()")
-    await suspend("A", 3600)  # 1 hour
+    await suspend("A", 8)
     print("ending f()")
 
 
 async def main():
     task = asyncio.create_task(f())
-    await asyncio.sleep(3)
-    task.cancel()
+    await asyncio.sleep(2)
+    task.cancel("from main()")
     try:
         await task
     except asyncio.CancelledError:
