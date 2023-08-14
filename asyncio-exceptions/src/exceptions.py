@@ -12,10 +12,12 @@ async def main():
             task_args["F"] = ZeroDivisionError
             for id in task_args:
                 tg.create_task(task(id, task_args[id]), name=id)
-    except Exception as e:
-        print(type(e))
-        print(type(e.args))
-        print(f"> {e}")
+    # except* asyncio.CancelledError as e:
+    #     print(f"Exceptions: {e.exceptions}")
+    except* RuntimeError as e:
+        print(f"Exceptions: {e.exceptions}")
+    except* ZeroDivisionError as e:
+        print(f"Exceptions: {e.exceptions}")
 
 
 asyncio.run(main())
