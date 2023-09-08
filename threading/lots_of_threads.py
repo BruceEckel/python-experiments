@@ -11,8 +11,7 @@ if __name__ == "__main__":
     ]
     for t in threads:
         t.start()
-    print(
-        f"""
+    print(f"""
     {threading.enumerate() = }
     {threading.main_thread() = }
     {threading.main_thread().native_id = }
