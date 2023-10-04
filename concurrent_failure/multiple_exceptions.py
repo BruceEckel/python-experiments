@@ -1,7 +1,7 @@
 import asyncio
 
 
-async def task_function(i):
+async def fallible(i):
     match i:
         case 5:
             raise ValueError(f"i: {i}")
@@ -15,7 +15,7 @@ async def task_function(i):
 
 
 async def main():
-    tasks = [task_function(i) for i in range(8)]
+    tasks = [fallible(i) for i in range(8)]
     results = await asyncio.gather(*tasks, return_exceptions=True)
 
     for result in results:
