@@ -5,7 +5,6 @@ description = "Add your description here"
 authors = [
     { name = "Bruce Eckel", email = "mindviewinc@gmail.com" }
 ]
-dependencies = []
 readme = "README.md"
 requires-python = ">= 3.8"
 
