@@ -41,8 +41,10 @@ async def main() -> None:
     # except* AttributeError as e:
     #     print(f"Attribute Error: '{e}'")
 
-    async with print_lock:
-        print("---> Tasks created")
+    # Don't need this, as Structured concurrency
+    # Ensures all the tasks are finished by this point:
+    # async with print_lock:
+    print("---> Tasks created")
     for t in tasks:
         print(f"{t.get_name()}", end=", ")
         try:
