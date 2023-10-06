@@ -26,12 +26,21 @@ async def main() -> None:
     except ExceptionGroup as e:
         for exc in e.exceptions:
             match exc:
-                case ValueError() as ve:
-                    print(f"Value Error: '{ve}'")
-                case TypeError() as te:
-                    print(f"Type Error: '{te}'")
-                case AttributeError() as ae:
-                    print(f"Attribute Error: '{ae}'")
+                case ValueError() as e:
+                    print(f"Value Error: '{e}'")
+                case TypeError() as e:
+                    print(f"Type Error: '{e}'")
+                case AttributeError() as e:
+                    print(f"Attribute Error: '{e}'")
+
+    # Does this produce the same output as above?
+    # except* ValueError as e:
+    #     print(f"Value Error: '{e}'")
+    # except* TypeError as e:
+    #     print(f"Type Error: '{e}'")
+    # except* AttributeError as e:
+    #     print(f"Attribute Error: '{e}'")
+
     async with print_lock:
         print("---> Tasks created")
     for t in tasks:
