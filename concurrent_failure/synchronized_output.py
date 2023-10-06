@@ -1,39 +1,26 @@
 import asyncio
 
 
-class BaseError(Exception):
-    # When pattern matching, bind
-    # to the `message` attribute:
-    __match_args__ = ("message",)
-
-    def __init__(self, message: str) -> None:
-        super().__init__(message)
-        self.message = message
-
-
-class FallibleError(BaseError):
-    pass
-
-
-class PanicError(BaseError):
-    pass
-
-
-async def fallible_task(i: int, print_lock: asyncio.Lock) -> str:
+async def fallible(i: int, print_lock: asyncio.Lock) -> str:
     async with print_lock:
         print(f"fallible({i})")
 
-    if i == 5:
-        raise PanicError(f"i:{i} panicked!")
-    elif i % 2 == 0:
-        raise FallibleError(f"Failed({i})")
-    return chr(ord("a") + i)
+    match i:
+        case 5:
+            raise ValueError(f"i: {i}")
+        case _ if i % 2 == 0:
+            raise TypeError(f"i: {i}")
+        case _ if i % 3 == 0:
+            raise AttributeError(f"i: {i}")
+        case _:
+            # Convert number to letter:
+            return chr(ord("a") + i)
 
 
 async def main() -> None:
     print_lock = asyncio.Lock()
 
-    tasks = [fallible_task(i, print_lock) for i in range(10)]
+    tasks = [fallible(i, print_lock) for i in range(10)]
 
     async with print_lock:
         print("Tasks created")
@@ -44,10 +31,12 @@ async def main() -> None:
         match result:
             case str(letter):
                 print(f"Letter: {letter}")
-            case FallibleError(message):
-                print(f"Err: {message}")
-            case PanicError(message):
-                print(f"Panic: {message}")
+            case ValueError():
+                print(f"Value Error: {result.args[0]}")
+            case TypeError():
+                print(f"Type Error: {result.args[0]}")
+            case AttributeError():
+                print(f"Attribute Error: {result.args[0]}")
             case _:
                 print(f"Unexpected: {result}")
 
