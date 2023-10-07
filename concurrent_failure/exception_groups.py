@@ -3,7 +3,6 @@ import asyncio
 
 async def fallible(i: int) -> str:
     print(f"{i}", end=" ")
-    # await asyncio.sleep(1)
     match i:
         case 2:
             raise ValueError(f"VE[{i}]")
@@ -31,27 +30,20 @@ async def main() -> None:
             ]
         print("Tasks Complete, no exceptions")
     except Exception as e:
-        print(
-            f"\nThere's an exception:\n{e = }\n{e.args = }"
-        )
+        print(f"\n->\n{e = }\n{e.args = }")
         if isinstance(e, ExceptionGroup):
             for exc in e.exceptions:
-                print(f"\t{exc = }, {exc.args = }")
+                print(
+                    f"\t{type(exc).__name__}{exc.args}"
+                )
 
     for t in tasks:
-        task_name = t.get_name()
-        # print(f"{task_name}", end=" ")
-        # print(f"{t} {t.cancelled() = }")
         print(f"{t.get_name()}: {t.cancelled() = }")
-        # if t.cancelled():
-        #     print(
-        #         f"cancelled({task_name.split()[1]})"
-        #     )
-        # else:
-        #     try:
-        #         print(f"result = {t.result()}")
-        #     except Exception as e:
-        #         print(f"{type(e).__name__}[{e}]")
+        if not t.cancelled():
+            try:
+                print(f"{t.result() = }")
+            except Exception as e:
+                print(f"{type(e).__name__}({e})")
 
 
 if __name__ == "__main__":
