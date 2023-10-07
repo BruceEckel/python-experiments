@@ -2,19 +2,22 @@
 name = "concurrent-failure"
 version = "0.1.0"
 description = "Add your description here"
-authors = [
-    { name = "Bruce Eckel", email = "mindviewinc@gmail.com" }
-]
 readme = "README.md"
 requires-python = ">= 3.8"
+[[project.authors]]
+name = "Bruce Eckel"
+email = "mindviewinc@gmail.com"
 
 [build-system]
-requires = ["hatchling"]
+requires = [ "hatchling",]
 build-backend = "hatchling.build"
 
 [tool.rye]
 managed = true
 dev-dependencies = []
+
+[tool.black]
+line-length = 53
 
 [tool.hatch.metadata]
 allow-direct-references = true
