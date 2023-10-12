@@ -11,7 +11,7 @@ async def fallible(i: int) -> str:
             raise ValueError(f"V[{i}]")
         case 3:
             raise TypeError(f"T[{i}]")
-        case 5:
+        case 5 | 6:
             raise AttributeError(f"A[{i}]")
         case _:
             await asyncio.sleep(3)

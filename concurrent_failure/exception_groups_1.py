@@ -1,13 +1,14 @@
 import asyncio
 from fallible import fallible
+from pprint import pformat
 
 
 async def main() -> None:
+    tasks = []
     try:
+        # raise RuntimeError("Not in TaskGroup")
         async with asyncio.TaskGroup() as tg:
-            # Test a non-ExceptionGroup:
-            # tasks = []
-            # raise RuntimeError("Nothing works!")
+            # raise RuntimeError("In TaskGroup")
             tasks = [
                 tg.create_task(
                     fallible(i),
@@ -15,15 +16,14 @@ async def main() -> None:
                 )
                 for i in range(8)
             ]
-        # Any exceptions --> can't get here:
         print("Tasks Complete, no exceptions")
+    except ExceptionGroup as e:
+        print(
+            f"\n{type(e).__name__}"
+            + f"{pformat(e.args, width=47)}"
+        )
     except Exception as e:
-        print(f"\n->\n{e = }\n{e.args = }")
-        if isinstance(e, ExceptionGroup):
-            for exc in e.exceptions:
-                print(
-                    f"\t{type(exc).__name__}{exc.args}"
-                )
+        print(f"Not an ExceptionGroup: {e}")
 
     for t in tasks:
         cancelled = t.cancelled()
@@ -32,8 +32,8 @@ async def main() -> None:
         print(f"{t.get_name()}: {c}Cancelled", end=e)
         if not cancelled:
             try:
-                # If it failed, result() rethrows
-                print(f"{t.result() = }")
+                # If it failed, t.result() rethrows
+                print(f"{t.result()}")
             except Exception as e:
                 print(f"{type(e).__name__}({e})")
 

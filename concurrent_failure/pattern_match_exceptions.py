@@ -1,22 +1,12 @@
 import asyncio
-
-
-async def fallible(i):
-    match i:
-        case 5:
-            raise ValueError(f"i: {i}")
-        case _ if i % 2 == 0:
-            raise TypeError(f"i: {i}")
-        case _ if i % 3 == 0:
-            raise AttributeError(f"i: {i}")
-        case _:
-            # Convert number to letter:
-            return chr(ord("a") + i)
+from fallible import fallible
 
 
 async def main():
     tasks = [fallible(i) for i in range(8)]
-    results = await asyncio.gather(*tasks, return_exceptions=True)
+    results = await asyncio.gather(
+        *tasks, return_exceptions=True
+    )
 
     for result in results:
         match result:
@@ -28,6 +18,8 @@ async def main():
                 print(f"Attribute Error: {result}")
             case str(letter):
                 print(f"Letter: {letter}")
+            case _:
+                print(f"Unexpected: {result}")
 
 
 asyncio.run(main())
