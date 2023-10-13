@@ -5,6 +5,10 @@ from pprint import pformat
 
 
 async def main():
+    def display(id: str, e: Exception):
+        print(f"\ntype(e): {type(e).__name__}")
+        print(f"{id}: '{e}'\n\t'{e.exceptions}'")
+
     try:
         async with asyncio.TaskGroup() as tg:
             tasks = [
@@ -12,13 +16,13 @@ async def main():
                 for i in range(8)
             ]
     except* ValueError as e:
-        print(f"\nValue Error: '{e}'")
+        display("Value", e)
     except* TypeError as e:
-        print(f"\nType Error: '{e}'")
+        display("Type", e)
     except* AttributeError as e:
-        print(f"\nAttribute Error: '{e}'")
+        display("Attribute", e)
     except* CancelledError as e:
-        print(f"\nCancelled Error: '{e}'")
+        display("Cancelled", e)
 
     for t in tasks:
         try:
@@ -28,7 +32,8 @@ async def main():
         # CancelledError is a subclass of BaseException:
         except BaseException as e:
             print(
-                f"\n{type(e).__name__}"
+                f"{t.get_name()} "
+                + f"{type(e).__name__}"
                 + f"{pformat(e.args, width=47)}"
             )
 
