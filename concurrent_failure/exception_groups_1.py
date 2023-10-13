@@ -26,11 +26,16 @@ async def main() -> None:
         print(f"Not an ExceptionGroup: {e}")
 
     for t in tasks:
+        # print(f"{repr(t) = }")
+        # print(f"{dir(t) = }")
+        print(f"{t.cancelled() = }")
         cancelled = t.cancelled()
         c = "Not " if not cancelled else ""
         e = "\n" if cancelled else ": "
-        print(f"{t.get_name()}: {c}Cancelled", end=e)
-        if not cancelled:
+        print(
+            f"{t.get_name()}: {c}Cancelled"
+        )  # , end=e)
+        if not t.cancelled():
             try:
                 # If it failed, t.result() rethrows
                 print(f"{t.result()}")

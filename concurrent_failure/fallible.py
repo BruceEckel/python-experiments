@@ -10,7 +10,7 @@ async def fallible(i: int) -> str:
         case 1:
             raise ValueError(f"V[{i}]")
         case 3:
-            raise TypeError(f"T[{i}]")
+            raise TabError(f"T[{i}]")
         case 5 | 6:
             raise AttributeError(f"A[{i}]")
         case _:

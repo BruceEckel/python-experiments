@@ -12,8 +12,8 @@ async def main():
         match result:
             case ValueError():
                 print(f"Value Error: {result}")
-            case TypeError():
-                print(f"Type Error: {result}")
+            case TabError():
+                print(f"Tab Error: {result}")
             case AttributeError():
                 print(f"Attribute Error: {result}")
             case str(letter):
