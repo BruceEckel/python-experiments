@@ -28,21 +28,13 @@ async def main() -> None:
         print("- Tasks Complete -")
 
     for t in tasks:
-        # print(f"{repr(t) = }")
-        # print(f"{dir(t) = }")
-        print(f"{t.cancelled() = }")
-        cancelled = t.cancelled()
-        c = "Not " if not cancelled else ""
-        e = "\n" if cancelled else ": "
-        print(
-            f"{t.get_name()}: {c}Cancelled"
-        )  # , end=e)
+        print(f"{t.get_name()}: {t.cancelled() = }")
         if not t.cancelled():
             try:
                 # If it failed, t.result() rethrows
-                print(f"{t.result()}")
+                print(f"\t{t.result()}")
             except Exception as e:
-                print(f"{type(e).__name__}({e})")
+                print(f"\t{type(e).__name__}({e})")
 
 
 if __name__ == "__main__":
