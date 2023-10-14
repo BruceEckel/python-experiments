@@ -1,16 +1,10 @@
+# exception_groups_2.py
 import asyncio
-from fallible import fallible
+from fallible import fallible, display
 from asyncio import CancelledError
-from pprint import pformat
 
 
 async def main():
-    def display(id: str, e: Exception):
-        print(f"\n{repr(e)}")
-        print(f"[{id}]: {e.args[0]}")
-        for se in e.exceptions:  # e.args[1]
-            print(f"\t{repr(se)}")
-
     try:
         async with asyncio.TaskGroup() as tg:
             tasks = [
@@ -18,25 +12,25 @@ async def main():
                 for i in range(8)
             ]
     except* ValueError as e:
-        display("Value", e)
+        display(e)
     except* TabError as e:
-        display("Tab", e)
+        display(e)
     except* AttributeError as e:
-        display("Attribute", e)
+        display(e)
     except* CancelledError as e:  # Never happens
-        display("Cancelled", e)
+        display(e)
+    finally:
+        print("- Tasks Complete -")
 
     for t in tasks:
-        try:  # Never runs
-            print(
-                f"{t.get_name()} -> {t.result()}"
-            )  # Or re-raises exception
+        # There's no t.result(); raises exception:
+        try:
+            print(f"{t.get_name()} -> {t.result()}")
+        except Exception as e:
+            display(e, "Exception: ")
         # CancelledError is a subclass of BaseException:
         except BaseException as e:
-            print(
-                f"{t.get_name()} "
-                + f"{type(e).__name__}{e.args}"
-            )
+            display(e, "BaseException: ")
 
 
 asyncio.run(main())

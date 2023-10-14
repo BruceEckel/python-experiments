@@ -1,9 +1,11 @@
 import asyncio
+from asyncio import CancelledError
+from pprint import pformat
 
 
 async def fallible(i: int) -> str:
     await asyncio.sleep(0.1)
-    print(f"{i}", end=" ")
+    print(f"fallible({i})")
     match i:
         # Commenting 1 & 3 shows that 5 cancels everything.
         # Commenting all but '_' shows success.
@@ -17,3 +19,11 @@ async def fallible(i: int) -> str:
             await asyncio.sleep(3)
             # Convert number to letter:
             return chr(ord("a") + i)
+
+
+def display(e: Exception, msg: str = ""):
+    print(f"{msg}{type(e).__name__}")
+    if not isinstance(e, CancelledError):
+        print(
+            f"  {pformat(e.args, indent= 2, width=47)}"
+        )
