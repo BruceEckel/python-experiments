@@ -16,7 +16,7 @@ async def main() -> None:
                 )
                 for i in range(8)
             ]
-        print("Tasks Complete, no exceptions")
+        print("No exceptions")
     except ExceptionGroup as e:
         print(
             f"\n{type(e).__name__}"
@@ -24,6 +24,8 @@ async def main() -> None:
         )
     except Exception as e:
         print(f"Not an ExceptionGroup: {e}")
+    finally:
+        print("- Tasks Complete -")
 
     for t in tasks:
         cancelled = t.cancelled()
