@@ -23,9 +23,9 @@ async def main():
         print("- Tasks Complete -")
 
     for t in tasks:
-        # There's no t.result(); raises exception:
-        try:
-            print(f"{t.get_name()} -> {t.result()}")
+        print(f"{t.get_name()} -> ", end="")
+        try:  # Raises exception if no t.result():
+            print(f"{t.result()}")
         except Exception as e:
             display(e, "Exception: ")
         # CancelledError is a subclass of BaseException:

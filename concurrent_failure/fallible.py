@@ -7,7 +7,6 @@ async def fallible(i: int) -> str:
     await asyncio.sleep(0.1)
     print(f"fallible({i})")
     match i:
-        # Commenting 1 & 3 shows that 5 cancels everything.
         # Commenting all but '_' shows success.
         case 1:
             raise ValueError(f"V[{i}]")

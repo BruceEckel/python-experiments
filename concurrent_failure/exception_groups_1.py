@@ -24,7 +24,7 @@ async def main() -> None:
 
     for t in tasks:
         print(
-            f"{t.get_name()}: "
+            f"{t.get_name()} -> "
             + f"cancelled[{t.cancelled()}]"
         )
         if not t.cancelled():
