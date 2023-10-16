@@ -17,6 +17,9 @@ async def main():
         display(e)
     except* AttributeError as e:
         display(e)
+        # Iterate through individual exceptions:
+        for ex in e.exceptions:
+            display(ex)
     except* CancelledError as e:  # Never happens
         display(e)
     finally:
