@@ -10,11 +10,11 @@ async def fallible(i: int) -> str:
     match i:
         # Commenting all but '_' shows success.
         case 1:
-            raise ValueError(f"V[{i}]")
+            raise ValueError(f"VE[{i}]")
         case 3:
-            raise TabError(f"T[{i}]")
+            raise TabError(f"TE[{i}]")
         case 5 | 6:
-            raise AttributeError(f"A[{i}]")
+            raise AttributeError(f"AE[{i}]")
         case _:
             await asyncio.sleep(3)
             # Convert number to letter:
