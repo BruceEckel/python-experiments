@@ -2,6 +2,7 @@
 from dataclasses import dataclass
 
 
+@dataclass(frozen=True)
 class Result:
     pass
 
@@ -13,7 +14,7 @@ class Ok(Result):
     def __post_init__(self):
         assert isinstance(
             self.string, str
-        ), "Expected a string in Ok result."
+        ), "Expected string in Ok Result."
 
 
 @dataclass(frozen=True)
@@ -23,9 +24,4 @@ class Err(Result):
     def __post_init__(self):
         assert isinstance(
             self.err, Exception
-        ), "Expected an exception in Err result."
-
-
-# Example Usage
-result1 = Ok("eeny")
-result2 = Err(Exception("after eeny"))
+        ), "Expected exception in Err Result."
