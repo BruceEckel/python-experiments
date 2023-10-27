@@ -1,35 +1,22 @@
 # convert_exceptions.py
-from dataclasses import dataclass
-
-
-@dataclass(frozen=True)
-class Result:
-    string: str | None = None
-    err: Exception | None = None
-
-    def __post_init__(self):
-        assert (
-            self.string
-            is None ^ self.err
-            is None
-        )
+from result import Result, Ok, Err
 
 
 def fallible() -> Result:
-    results = [
-        Result("eeny"),
-        Result(err=Exception("after eeny")),
-        Result("meeny"),
-        Result(err=Exception("after meeny")),
-        Result("miney"),
-        Result(err=Exception("after miney")),
-        Result("moe"),
-        Result(err=Exception("after moe")),
-    ]
-
     # Create a 'static' variable for this function:
     if not hasattr(fallible, "index"):
         fallible.index = 0
+
+    results = [
+        Ok("eeny"),
+        Err(err=Exception("after eeny")),
+        Ok("meeny"),
+        Err(err=Exception("after meeny")),
+        Ok("miney"),
+        Err(err=Exception("after miney")),
+        Ok("moe"),
+        Err(err=Exception("after moe")),
+    ]
 
     result = results[
         fallible.index % len(results)
