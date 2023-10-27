@@ -3,7 +3,7 @@ from typing import Iterator
 from dataclasses import dataclass
 
 
-@dataclass  # Or enum? which is really an 'OR'
+@dataclass  # Or enum? which is really an 'OR'; look at Rust's Result def
 class Result:
     string: str | None = None
     err: Exception | None = None
