@@ -1,15 +1,14 @@
-# convert-exceptions.py
-from typing import Iterator
+# type_union.py
 from dataclasses import dataclass
 
 
-@dataclass  # Or enum? which is really an 'OR'; look at Rust's Result def
+@dataclass
 class Result:
     string: str | None = None
     err: Exception | None = None
 
 
-def fallible() -> Iterator[Result]:
+def fallible() -> Result:
     results = [
         Result("eeny"),
         Result(err=Exception("after eeny")),
@@ -20,15 +19,22 @@ def fallible() -> Iterator[Result]:
         Result("moe"),
         Result(err=Exception("after moe")),
     ]
-    while True:
-        for result in results:
-            yield result
+
+    # Create a 'static' variable for this function:
+    if not hasattr(fallible, "index"):
+        fallible.index = 0
+
+    result = results[
+        fallible.index % len(results)
+    ]
+    fallible.index += 1
+
+    return result
 
 
 if __name__ == "__main__":
-    for n, result in zip(
-        range(11), fallible()
-    ):
+    for n in range(11):
+        result = fallible()
         match result:
             case Result(string=str(s)):
                 print(f"{n}: String -> {s}")
