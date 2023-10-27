@@ -1,21 +1,21 @@
-# convert_exceptions.py
-from string_result import StringResult, Ok, Err
+# convert_exceptions_2.py
+from result import Result, Ok, Err
 
 
-def fallible() -> StringResult:
+def fallible() -> Result:
     # Holds its value between function calls:
     if not hasattr(fallible, "index"):
         fallible.index = 0
 
     results = [
         Ok("eeny"),
-        Err(err=Exception("after eeny")),
+        Err(Exception("after eeny")),
         Ok("meeny"),
-        Err(err=Exception("after meeny")),
+        Err(IndentationError("after meeny")),
         Ok("miney"),
-        Err(err=Exception("after miney")),
+        Err(TabError("after miney")),
         Ok("moe"),
-        Err(err=Exception("after moe")),
+        Err(ValueError("after moe")),
     ]
 
     result = results[
@@ -29,10 +29,9 @@ def fallible() -> StringResult:
 if __name__ == "__main__":
     for n in range(11):
         result = fallible()
+        print(result)
         match result:
-            case StringResult(string=str(s)):
-                print(f"{n}: String -> {s}")
-            case StringResult(
-                err=exc
-            ) if isinstance(exc, Exception):
+            case Ok(value=s):
+                print(f"{n}: Success -> {s}")
+            case Err(value=exc):
                 print(f"{n}: Error -> {exc}")
