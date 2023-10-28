@@ -1,4 +1,4 @@
-# convert_exceptions_2.py
+# return_result.py
 from result import Result, Ok, Err
 from my_error import MyError, err
 
@@ -15,7 +15,7 @@ results = [
 ]
 
 
-def fallible2(n: int) -> Result:
+def fallible2(n: int) -> Result | None:
     return results[n] if n < len(results) else None
 
 

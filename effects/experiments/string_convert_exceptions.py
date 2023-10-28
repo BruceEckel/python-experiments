@@ -1,4 +1,4 @@
-# convert_exceptions.py
+# string_convert_exceptions.py
 from string_result import StringResult, Ok, Err
 
 
@@ -18,9 +18,7 @@ def fallible() -> StringResult:
         Err(err=Exception("after moe")),
     ]
 
-    result = results[
-        fallible.index % len(results)
-    ]
+    result = results[fallible.index % len(results)]
     fallible.index += 1
 
     return result
@@ -32,7 +30,5 @@ if __name__ == "__main__":
         match result:
             case StringResult(string=str(s)):
                 print(f"{n}: String -> {s}")
-            case StringResult(
-                err=exc
-            ) if isinstance(exc, Exception):
+            case StringResult(err=exc) if isinstance(exc, Exception):
                 print(f"{n}: Error -> {exc}")
