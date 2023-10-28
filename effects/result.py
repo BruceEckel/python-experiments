@@ -3,9 +3,7 @@ from dataclasses import dataclass
 from typing import Generic, TypeVar
 
 T = TypeVar("T")  # Holds any type
-E = TypeVar(  # Always some type of exception
-    "E", bound=Exception
-)
+E = TypeVar("E", bound=Exception)  # Always a type of exception
 
 
 @dataclass(frozen=True)

@@ -1,48 +1,42 @@
 # convert_exceptions_2.py
 from result import Result, Ok, Err
+from my_error import MyError, err
 
 
-def fallible() -> Result:
-    # Holds its value between function calls:
-    if not hasattr(fallible, "index"):
-        fallible.index = 0
+results = [
+    Ok("eeny"),
+    Err(Exception("after eeny")),
+    Ok("meeny"),
+    Err(TabError("after meeny")),
+    Ok("miney"),
+    Err(ValueError("after miney")),
+    Ok("moe"),
+    Err(MyError("after moe")),
+]
 
-    results = [
-        Ok("eeny"),
-        Err(Exception("after eeny")),
-        Ok("meeny"),
-        Err(IndentationError("after meeny")),
-        Ok("miney"),
-        Err(TabError("after miney")),
-        Ok("moe"),
-        Err(ValueError("after moe")),
-    ]
 
-    result = results[fallible.index % len(results)]
-    fallible.index += 1
-
-    return result
+def fallible2(n: int) -> Result:
+    return results[n] if n < len(results) else None
 
 
 if __name__ == "__main__":
-    for n in range(8):
-
-        def show(id: str, msg: str):
-            print(f"{n}: {id} Error -> {msg}")
-
-        result = fallible()
+    for n in range(len(results) + 1):
+        print(f"{n}: ", end="")
+        result = fallible2(n)
         print(result)
         match result:
             case Ok(value=s):
                 print(f"{n}: Success -> {s}")
+            case None:
+                print("No result")
             case Err(value=exc):
                 match exc:
                     case TabError(args=(msg,)):
-                        show("Tab", msg)
-                    case IndentationError(args=(msg,)):
-                        show("Indentation", msg)
+                        err("Tab", msg)
                     case ValueError(args=(msg,)):
-                        show("Value", msg)
+                        err("Value", msg)
+                    case MyError(args=(msg,)):
+                        err("My", msg)
                     case Exception(args=(msg,)):
-                        show("Generic", msg)
+                        err("Generic", msg)
         print("-" * 40)
