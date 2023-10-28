@@ -18,20 +18,31 @@ def fallible() -> Result:
         Err(ValueError("after moe")),
     ]
 
-    result = results[
-        fallible.index % len(results)
-    ]
+    result = results[fallible.index % len(results)]
     fallible.index += 1
 
     return result
 
 
 if __name__ == "__main__":
-    for n in range(11):
+    for n in range(8):
+
+        def show(id: str, msg: str):
+            print(f"{n}: {id} Error -> {msg}")
+
         result = fallible()
         print(result)
         match result:
             case Ok(value=s):
                 print(f"{n}: Success -> {s}")
             case Err(value=exc):
-                print(f"{n}: Error -> {exc}")
+                match exc:
+                    case TabError(args=(msg,)):
+                        show("Tab", msg)
+                    case IndentationError(args=(msg,)):
+                        show("Indentation", msg)
+                    case ValueError(args=(msg,)):
+                        show("Value", msg)
+                    case Exception(args=(msg,)):
+                        show("Generic", msg)
+        print("-" * 40)

@@ -10,15 +10,18 @@ name = "Bruce Eckel"
 email = "MindviewInc@gmail.com"
 
 [build-system]
-requires = [ "hatchling",]
+requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.rye]
 managed = true
-dev-dependencies = [ "mypy>=1.6.1",]
+dev-dependencies = [
+    "mypy>=1.6.1",
+    "pyright>=1.1.333",
+]
 
 [tool.black]
-line-length = 47
+line-length = 70
 
 [tool.hatch.metadata]
 allow-direct-references = true

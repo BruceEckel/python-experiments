@@ -12,6 +12,5 @@ class Basic(Enum):
 
 
 if __name__ == "__main__":
-    Basic.show()
     # Basic.B = 99
     Basic.show()
