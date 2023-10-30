@@ -3,19 +3,17 @@ from my_error import MyError, err
 
 results = [
     "eeny",
-    Exception("after eeny"),
+    TabError("after eeny"),
     "meeny",
-    TabError("after meeny"),
+    ValueError("after meeny"),
     "miney",
-    ValueError("after miney"),
-    "moe",
-    MyError("after moe"),
+    MyError("after miney"),
 ]
 
 
 def fallible1(
     n: int,
-) -> str | Exception | TabError | ValueError | MyError | None:
+) -> str | TabError | ValueError | MyError | None:
     return results[n] if n < len(results) else None
 
 
@@ -31,7 +29,5 @@ if __name__ == "__main__":
                 err("Value", msg)
             case MyError(args=(msg,)):
                 err("My", msg)
-            case Exception(args=(msg,)):
-                err("Generic", msg)
             case None:
                 print("No result")

@@ -5,30 +5,29 @@ from my_error import MyError, err
 
 results = [
     Ok("eeny"),
-    Err(Exception("after eeny")),
+    Err(TabError("after eeny")),
     Ok("meeny"),
-    Err(TabError("after meeny")),
+    Err(ValueError("after meeny")),
     Ok("miney"),
-    Err(ValueError("after miney")),
-    Ok("moe"),
-    Err(MyError("after moe")),
+    Err(MyError("after miney")),
 ]
 
 
-def fallible2(n: int) -> Result | None:
+def fallible(n: int) -> Result | None:
     return results[n] if n < len(results) else None
 
 
 if __name__ == "__main__":
     for n in range(len(results) + 1):
         print(f"{n}: ", end="")
-        result = fallible2(n)
+        result = fallible(n)
         print(result)
+        if result is None:
+            print("No result")
+            continue
         match result:
             case Ok(value=s):
                 print(f"{n}: Success -> {s}")
-            case None:
-                print("No result")
             case Err(value=exc):
                 match exc:
                     case TabError(args=(msg,)):
@@ -37,6 +36,5 @@ if __name__ == "__main__":
                         err("Value", msg)
                     case MyError(args=(msg,)):
                         err("My", msg)
-                    case Exception(args=(msg,)):
-                        err("Generic", msg)
+
         print("-" * 40)
