@@ -1,5 +1,5 @@
 # main.py
-from result import Ok, Err
+from my_result import Ok, Err
 from operations import (
     get_number_from_string,
     double_number,

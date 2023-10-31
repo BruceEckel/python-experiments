@@ -1,5 +1,5 @@
 # return_result.py
-from result import Result, Ok, Err
+from my_result import Result, Ok, Err
 from my_error import MyError, err
 
 

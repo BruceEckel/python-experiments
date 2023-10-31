@@ -1,5 +1,5 @@
 # operations.py
-from result import Result, Ok, Err
+from my_result import Result, Ok, Err
 
 
 def get_number_from_string(s: str) -> Result[int, Exception]:
