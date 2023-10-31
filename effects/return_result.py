@@ -1,10 +1,11 @@
 # return_result.py
 # Use the `result` library https://pypi.org/project/result/
+from typing import List
 from result import Result, Ok, Err
 from my_error import MyError, err
 
 
-results = [
+results: List[Result[str, Exception]] = [
     Ok("eeny"),
     Err(TabError("after eeny")),
     Ok("meeny"),

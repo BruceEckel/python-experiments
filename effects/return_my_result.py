@@ -1,9 +1,9 @@
 # return_my_result.py
+from typing import List, Callable
 from my_result import Result, Ok, Err
 from my_error import MyError, err
 
-
-results = [
+results: List[Result[str, Exception]] = [
     Ok("eeny"),
     Err(TabError("after eeny")),
     Ok("meeny"),
@@ -13,22 +13,25 @@ results = [
 ]
 
 
-def fallible(n: int) -> Result | None:
+def fallible(n: int) -> Result[str, Exception] | None:
     return results[n] if n < len(results) else None
 
 
-if __name__ == "__main__":
-    for n in range(len(results) + 1):
+def test_results(
+    results_array: List[Result[str, Exception]],
+    fallible_func: Callable[[int], Result[str, Exception] | None],
+):
+    for n in range(len(results_array) + 1):
         print(f"{n}: ", end="")
-        result = fallible(n)
+        result = fallible_func(n)
         print(result)
         if result is None:
             print("No result")
             continue
         match result:
-            case Ok(value=s):
-                print(f"{n}: Success -> {s}")
-            case Err(value=exc):
+            case Ok(value):
+                print(f"{n}: Success -> {value}")
+            case Err(exc):
                 match exc:
                     case TabError(args=(msg,)):
                         err("Tab", msg)
@@ -38,3 +41,7 @@ if __name__ == "__main__":
                         err("My", msg)
 
         print("-" * 40)
+
+
+if __name__ == "__main__":
+    test_results(results, fallible)
