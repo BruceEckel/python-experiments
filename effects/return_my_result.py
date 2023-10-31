@@ -19,4 +19,4 @@ def fallible(n: int) -> Result[str, Exception] | None:
 
 
 if __name__ == "__main__":
-    test_results(results, fallible)
+    test_results(results, fallible)  # type: ignore
