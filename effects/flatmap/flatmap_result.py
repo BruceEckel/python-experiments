@@ -1,4 +1,4 @@
-# my_result.py
+# flatmap_result.py
 from dataclasses import dataclass
 from typing import Callable, Generic, TypeVar
 

@@ -1,7 +1,8 @@
 # type_union.py
+from typing import List
 from my_error import MyError, err
 
-results = [
+results: List[str | TabError | ValueError | MyError] = [
     "eeny",
     TabError("after eeny"),
     "meeny",

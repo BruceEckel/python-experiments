@@ -1,8 +1,9 @@
 # return_result.py
-# Use the `result` library https://pypi.org/project/result/
-from typing import Callable, List
+# Use https://pypi.org/project/result/
+from typing import List
 from result import Result, Ok, Err
-from my_error import MyError, err
+from my_error import MyError
+from test_results import test_results
 
 
 results: List[Result[str, Exception]] = [
@@ -17,32 +18,6 @@ results: List[Result[str, Exception]] = [
 
 def fallible(n: int) -> Result[str, Exception] | None:
     return results[n] if n < len(results) else None
-
-
-def test_results(
-    results_array: List[Result[str, Exception]],
-    fallible_func: Callable[[int], Result[str, Exception] | None],
-):
-    for n in range(len(results_array) + 1):
-        print(f"{n}: ", end="")
-        result = fallible_func(n)
-        print(result)
-        if result is None:
-            print("No result")
-            continue
-        match result:
-            case Ok(value):
-                print(f"{n}: Success -> {value}")
-            case Err(exc):
-                match exc:
-                    case TabError(args=(msg,)):
-                        err("Tab", msg)
-                    case ValueError(args=(msg,)):
-                        err("Value", msg)
-                    case MyError(args=(msg,)):
-                        err("My", msg)
-
-        print("-" * 40)
 
 
 if __name__ == "__main__":

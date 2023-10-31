@@ -2,9 +2,7 @@
 name = "effects"
 version = "0.1.0"
 description = "Add your description here"
-dependencies = [
-    "result>=0.13.1",
-]
+dependencies = ["result>=0.13.1"]
 readme = "README.md"
 requires-python = ">= 3.8"
 [[project.authors]]
@@ -17,13 +15,13 @@ build-backend = "hatchling.build"
 
 [tool.rye]
 managed = true
-dev-dependencies = [
-    "mypy>=1.6.1",
-    "pyright>=1.1.333",
-]
+dev-dependencies = ["mypy>=1.6.1", "pyright>=1.1.333"]
 
 [tool.black]
 line-length = 70
 
 [tool.hatch.metadata]
 allow-direct-references = true
+
+[tool.mypy]
+exclude = "(experiments|flatmap)/"
