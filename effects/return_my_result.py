@@ -1,6 +1,5 @@
-# return_result.py
-# Use the `result` library https://pypi.org/project/result/
-from result import Result, Ok, Err
+# return_my_result.py
+from my_result import Result, Ok, Err
 from my_error import MyError, err
 
 
@@ -14,7 +13,7 @@ results = [
 ]
 
 
-def fallible(n: int) -> Result[str, Exception] | None:
+def fallible(n: int) -> Result | None:
     return results[n] if n < len(results) else None
 
 
@@ -27,9 +26,9 @@ if __name__ == "__main__":
             print("No result")
             continue
         match result:
-            case Ok(value):
-                print(f"{n}: Success -> {value}")
-            case Err(exc):
+            case Ok(value=s):
+                print(f"{n}: Success -> {s}")
+            case Err(value=exc):
                 match exc:
                     case TabError(args=(msg,)):
                         err("Tab", msg)

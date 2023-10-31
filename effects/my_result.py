@@ -1,4 +1,4 @@
-# result.py
+# my_result.py
 from dataclasses import dataclass
 from typing import Generic, TypeVar
 
@@ -7,19 +7,15 @@ E = TypeVar("E", bound=Exception)  # Always a type of exception
 
 
 @dataclass(frozen=True)
-class Result(Generic[T, E]):
-    value: T | E
+class Result(Generic[T]):
+    value: T
 
 
 @dataclass(frozen=True)
-class Ok(Result[T, E]):
-    def __post_init__(self):
-        if isinstance(self.value, Exception):
-            raise TypeError("Not expecting Exception")
+class Ok(Result[T]):
+    pass
 
 
 @dataclass(frozen=True)
-class Err(Result[T, E]):
-    def __post_init__(self):
-        if not isinstance(self.value, Exception):
-            raise TypeError("Expecting Exception")
+class Err(Result[E]):
+    pass
