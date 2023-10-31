@@ -18,9 +18,8 @@ class AnyResult(Protocol, Generic[T, E]):
 
 
 def test_results(
-    results_array: List[  # Any and Exception widen the types
-        AnyResult[Any, Exception]
-    ],
+    # Any and Exception widen the types:
+    results_array: List[AnyResult[Any, Exception]],
     fallible_func: Callable[[int], AnyResult[Any, Exception] | None],
 ):
     for n in range(len(results_array) + 1):
