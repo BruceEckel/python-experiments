@@ -2,7 +2,9 @@
 name = "effects"
 version = "0.1.0"
 description = "Add your description here"
-dependencies = ["result>=0.13.1"]
+dependencies = [
+    "result>=0.13.1",
+]
 readme = "README.md"
 requires-python = ">= 3.8"
 [[project.authors]]

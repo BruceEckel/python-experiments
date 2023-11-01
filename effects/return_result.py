@@ -1,9 +1,7 @@
 # return_result.py
-# Use https://pypi.org/project/result/
 from typing import List
-from result import Result, Ok, Err
-from my_error import MyError
-from test_results import test_results
+from my_error import MyError, err
+from my_result import Result, Ok, Err
 
 
 def fallible(n: int) -> Result[str, Exception] | None:
@@ -19,6 +17,25 @@ results: List[Result[str, Exception]] = [
     Err(MyError("after miney")),
 ]
 
-
 if __name__ == "__main__":
-    test_results(results, fallible)  # type: ignore
+    for n in range(len(results) + 1):
+        print(f"{n}: ", end="")
+        result = fallible(n)
+        print(result)
+
+        match result:
+            case None:
+                print("No result")
+            case Ok(value):
+                print(f"Success -> {value}")
+            case Err(e):
+                if isinstance(e, TabError):
+                    err("Tab", e.args[0])
+                elif isinstance(e, ValueError):
+                    err("Value", e.args[0])
+                elif isinstance(e, MyError):
+                    err("My", e.args[0])
+                else:
+                    err("Unknown", "Unknown error type")
+
+        print("-" * 35)
