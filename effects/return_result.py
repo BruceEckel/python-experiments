@@ -5,7 +5,6 @@ from result import Result, Ok, Err
 from my_error import MyError
 from test_results import test_results
 
-
 results: List[Result[str, Exception]] = [
     Ok("eeny"),
     Err(TabError("after eeny")),
