@@ -2,6 +2,11 @@
 from typing import List
 from my_error import MyError, err
 
+
+def fallible(n: int) -> str | TabError | ValueError | MyError | None:
+    return results[n] if n < len(results) else None
+
+
 results: List[str | TabError | ValueError | MyError] = [
     "eeny",
     TabError("after eeny"),
@@ -12,16 +17,10 @@ results: List[str | TabError | ValueError | MyError] = [
 ]
 
 
-def fallible1(
-    n: int,
-) -> str | TabError | ValueError | MyError | None:
-    return results[n] if n < len(results) else None
-
-
 if __name__ == "__main__":
     for n in range(len(results) + 1):
         print(f"{n}: ", end="")
-        match fallible1(n):
+        match fallible(n):
             case str(s):
                 print(f"Success -> {s}")
             case TabError(args=(msg,)):
