@@ -19,22 +19,20 @@ results: List[Result[str, Exception]] = [
 
 if __name__ == "__main__":
     for n in range(len(results) + 1):
-        print(f"{n}: ", end="")
         result = fallible(n)
-        print(result)
 
         match result:
             case None:
-                print("No result")
+                print(f"{n}: No result")
             case Ok(value):
-                print(f"Success -> {value}")
+                print(f"{n}: Success -> {value}")
             case Err(TabError() as e):
-                err("Tab", e)
+                err(f"{n}: Tab", e)
             case Err(ValueError() as e):
-                err("Value", e)
+                err(f"{n}: Value", e)
             case Err(MyError() as e):
-                err("My", e)
+                err(f"{n}: My", e)
             case Err(_):
-                err("Unknown", "Unknown error type")
+                err(f"{n}: Unknown", "Unknown type")
 
-        print("-" * 25)
+        print(f"{result}\n" + "-" * 25)

@@ -7,7 +7,17 @@ if (Test-Path $outputFile) {
 }
 
 # Define the list of files
-$files = @("my_error.py", "my_result.py", "return_result.py", "test_both.py")
+# $files = @("my_error.py", "my_result.py", "return_result.py", "test_both.py")
+
+$files = @(
+    "my_error.py",
+    "type_union.py",
+    "my_result.py",
+    "return_result.py",
+    "test_both.py",
+    "operations.py",
+    "flatmap.py"
+)
 
 # Define the separator line with newlines
 $separator = "`n" + "-" * 40 

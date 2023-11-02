@@ -4,7 +4,7 @@ from my_error import MyError, err
 
 
 def fallible(n: int) -> str | TabError | ValueError | MyError | None:
-    return results[n] if n < len(results) else None
+    return results[n] if 0 <= n < len(results) else None
 
 
 results: List[str | TabError | ValueError | MyError] = [
@@ -19,15 +19,14 @@ results: List[str | TabError | ValueError | MyError] = [
 
 if __name__ == "__main__":
     for n in range(len(results) + 1):
-        print(f"{n}: ", end="")
         match fallible(n):
             case str(s):
-                print(f"Success -> {s}")
+                print(f"{n}: Success -> {s}")
             case TabError() as e:
-                err("Tab", e)
+                err(f"{n}: Tab", e)
             case ValueError() as e:
-                err("Value", e)
+                err(f"{n}: Value", e)
             case MyError() as e:
-                err("My", e)
+                err(f"{n}: My", e)
             case None:
-                print("No result")
+                print(f"{n}: No result")
