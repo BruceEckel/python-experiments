@@ -4,9 +4,10 @@ Most of these were created in the process of creating my book introducing
 the foundations of concurrency (still in development at this writing).
 Each subdirectory represents an experiment or a group of experiments.
 
-Each project uses the `rye` tool for creation and maintainance, and I assume
-the reader will also be using `rye`. However, `rye` creates `pyproject.toml`
-files so these may work with other systems such as `poetry`.
+Each project uses the [`rye` tool](https://rye-up.com/) for creation 
+and maintainance, and I assume the reader will also be using `rye`. 
+However, `rye` creates `pyproject.toml` files so these may work with other 
+systems such as `poetry`.
 
 To provision an experiment with tools, move into that directory (where you will
 see the `pyproject.toml` file) and run `rye sync`. This will create a virtual

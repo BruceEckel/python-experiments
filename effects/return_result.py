@@ -38,4 +38,4 @@ if __name__ == "__main__":
                 else:
                     err("Unknown", "Unknown error type")
 
-        print("-" * 35)
+        print("-" * 25)
