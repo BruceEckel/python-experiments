@@ -28,14 +28,13 @@ if __name__ == "__main__":
                 print("No result")
             case Ok(value):
                 print(f"Success -> {value}")
-            case Err(e):
-                if isinstance(e, TabError):
-                    err("Tab", e.args[0])
-                elif isinstance(e, ValueError):
-                    err("Value", e.args[0])
-                elif isinstance(e, MyError):
-                    err("My", e.args[0])
-                else:
-                    err("Unknown", "Unknown error type")
+            case Err(TabError() as e):
+                err("Tab", e)
+            case Err(ValueError() as e):
+                err("Value", e)
+            case Err(MyError() as e):
+                err("My", e)
+            case Err(_):
+                err("Unknown", "Unknown error type")
 
         print("-" * 25)
