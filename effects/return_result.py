@@ -5,7 +5,7 @@ from my_result import Result, Ok, Err
 
 
 def fallible(n: int) -> Result[str, Exception] | None:
-    return results[n] if n < len(results) else None
+    return results[n] if n in range(len(results)) else None
 
 
 results: List[Result[str, Exception]] = [
@@ -32,7 +32,7 @@ if __name__ == "__main__":
                 err(f"{n}: Value", e)
             case Err(MyError() as e):
                 err(f"{n}: My", e)
-            case Err(_):
-                err(f"{n}: Unknown", "Unknown type")
+            case Err(Exception() as e):
+                err(f"{n}: Unknown", e)
 
         print(f"{result}\n" + "-" * 25)

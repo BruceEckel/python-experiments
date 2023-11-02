@@ -4,7 +4,7 @@ from my_error import MyError, err
 
 
 def fallible(n: int) -> str | TabError | ValueError | MyError | None:
-    return results[n] if 0 <= n < len(results) else None
+    return results[n] if n in range(len(results)) else None
 
 
 results: List[str | TabError | ValueError | MyError] = [

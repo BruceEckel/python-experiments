@@ -6,5 +6,5 @@ class MyError(Exception):
 
 
 # Display helper:
-def err(type: str, msg: str) -> None:
-    print(f"{type} Error -> {msg}")
+def err(type: str, e: Exception) -> None:
+    print(f"{type} Error -> {e}")
