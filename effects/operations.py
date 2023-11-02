@@ -6,7 +6,7 @@ def get_number(s: str) -> Result[int, Exception]:
     try:
         return Ok(int(s))
     except ValueError:
-        return Err(ValueError(f"Couldn't convert {s} to a number."))
+        return Err(ValueError(f"Can't convert {s}"))
 
 
 def double(n: int) -> Result[int, Exception]:

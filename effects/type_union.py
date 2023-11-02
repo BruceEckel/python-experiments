@@ -23,11 +23,11 @@ if __name__ == "__main__":
         match fallible(n):
             case str(s):
                 print(f"Success -> {s}")
-            case TabError(args=(msg,)):
-                err("Tab", msg)
-            case ValueError(args=(msg,)):
-                err("Value", msg)
-            case MyError(args=(msg,)):
-                err("My", msg)
+            case TabError() as e:
+                err("Tab", e)
+            case ValueError() as e:
+                err("Value", e)
+            case MyError() as e:
+                err("My", e)
             case None:
                 print("No result")

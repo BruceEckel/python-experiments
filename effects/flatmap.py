@@ -13,5 +13,5 @@ if __name__ == "__main__":
     match result:
         case Ok(value):
             print(f"Success: {value}")
-        case Err(exc):
-            print(f"Error: {exc}")
+        case Err(e):
+            print(f"Error: {e}")
