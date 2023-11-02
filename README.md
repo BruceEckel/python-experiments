@@ -13,7 +13,7 @@ To provision an experiment with tools, move into that directory (where you will
 see the `pyproject.toml` file) and run `rye sync`. This will create a virtual
 environment and fetch the necessary libraries into that venv. In addition, `rye`
 provides a local version of Python, so you do not need to install a global Python
-in order to run any of the experiments. When you move into an experiment's
+in order to run any of the experiments; you only need to install Rye. When you move into an experiment's
 directory, or any of its subdirectories, that local version of Python and
 everything else in that virtual environment is automatically available (you
 do not have to explicitly start and shut down the virtual environment).
