@@ -1,3 +1,4 @@
+# my_result.py
 from dataclasses import dataclass
 from typing import Generic, TypeVar
 

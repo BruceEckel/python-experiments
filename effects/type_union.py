@@ -1,6 +1,6 @@
 # type_union.py
 from typing import List
-from my_error import MyError, err
+from my_error import MyError
 
 
 def fallible(n: int) -> str | TabError | ValueError | MyError | None:
@@ -23,10 +23,10 @@ if __name__ == "__main__":
             case str(s):
                 print(f"{n}: Success -> {s}")
             case TabError() as e:
-                err(f"{n}: Tab", e)
+                print(f"{n}: Tab Error ->", e)
             case ValueError() as e:
-                err(f"{n}: Value", e)
+                print(f"{n}: Value Error ->", e)
             case MyError() as e:
-                err(f"{n}: My", e)
+                print(f"{n}: My Error ->", e)
             case None:
                 print(f"{n}: No result")

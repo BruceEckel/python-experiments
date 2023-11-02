@@ -1,6 +1,6 @@
 # return_result.py
 from typing import List
-from my_error import MyError, err
+from my_error import MyError
 from my_result import Result, Ok, Err
 
 
@@ -27,12 +27,12 @@ if __name__ == "__main__":
             case Ok(value):
                 print(f"{n}: Success -> {value}")
             case Err(TabError() as e):
-                err(f"{n}: Tab", e)
+                print(f"{n}: Tab Error ->", e)
             case Err(ValueError() as e):
-                err(f"{n}: Value", e)
+                print(f"{n}: Value Error ->", e)
             case Err(MyError() as e):
-                err(f"{n}: My", e)
+                print(f"{n}: My Error ->", e)
             case Err(Exception() as e):
-                err(f"{n}: Unknown", e)
+                print(f"{n}: Unknown Error ->", e)
 
         print(f"{result}\n" + "-" * 25)
